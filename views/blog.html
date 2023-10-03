@@ -13,11 +13,486 @@
       href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/home.css" />
     <title>Blog</title>
   </head>
   <body>
-    <h1 class="">Blog</h1>
+    <!-- Header top -->
+    <header>
+      <div class="max-w-[1280px] mx-auto px-4">
+        <div
+          class="max-w-[1280px] mx-auto px-4 flex items-center justify-between"
+        >
+          <nav class="menu--moblie_container relative md:hidden">
+            <div class="menu--moblie_icon p-4">
+              <i class="fa-solid fa-bars text-lg"></i>
+            </div>
+            <ul
+              class="absolute w-[250px] bg-[rgba(0,0,0,0.1)] top-12 left-3 menu-mobile rounded-md"
+            >
+              <li class="px-5 hover:bg-[rgba(0,0,0,0.2)] py-3">
+                <a href="#" class="py-3">Tài khoản của tôi</a>
+              </li>
+              <li class="px-5 hover:bg-[rgba(0,0,0,0.2)] py-3">
+                <a href="./cart.html" class="py-3">Giỏ hàng</a>
+              </li>
+              <li class="px-5 hover:bg-[rgba(0,0,0,0.2)] py-3">
+                <a href="./login.html" class="py-3">Đăng nhập</a>
+              </li>
+              <li class="px-5 hover:bg-[rgba(0,0,0,0.2)] py-3">
+                <a href="./register.html" class="py-3">Đăng kí</a>
+              </li>
+            </ul>
+          </nav>
+          <nav class="hidden md:flex">
+            <ul class="flex">
+              <li class="px-5 hover:bg-[rgba(0,0,0,0.2)] py-3">
+                <a href="#" class="py-3">Tài khoản của tôi</a>
+              </li>
+              <li class="px-5 hover:bg-[rgba(0,0,0,0.2)] py-3">
+                <a href="./cart.html" class="py-3">Giỏ hàng</a>
+              </li>
+              <li class="px-5 hover:bg-[rgba(0,0,0,0.2)] py-3">
+                <a href="./login.html" class="py-3">Đăng nhập</a>
+              </li>
+              <li class="px-5 hover:bg-[rgba(0,0,0,0.2)] py-3">
+                <a href="./register.html" class="py-3">Đăng kí</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="relative">
+            <input
+              type="text"
+              placeholder="Tìm kiếm"
+              class="bg-white py-2 px-4 rounded-md border"
+            />
+            <span class="absolute top-2 right-4">
+              <i class="fa-solid fa-magnifying-glass text-gray-600"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Header -->
+    <header class="bg-black h-[100px] sticky top-0 right-0 left-0 z-10">
+      <div
+        class="max-w-[1280px] mx-auto px-4 flex items-center justify-between lg:justify-center"
+      >
+        <img
+          class="w-[120px]"
+          src="../assets//images//decorate/wine-logo1.png"
+          alt="logo"
+        />
+        <nav class="hidden lg:flex">
+          <ul class="flex text-white">
+            <li class="px-8 hover:bg-[rgba(255,255,255,0.1)] py-6">
+              <a href="#" class="py-3 uppercase text-[#fcce00]">Trang chủ</a>
+            </li>
+            <li class="px-8 hover:bg-[rgba(255,255,255,0.1)] py-6">
+              <a href="./filter-product.html" class="py-3 uppercase"
+                >Rượu vang trắng</a
+              >
+            </li>
+            <li class="px-8 hover:bg-[rgba(255,255,255,0.1)] py-6">
+              <a href="./filter-product.html" class="py-3 uppercase"
+                >Rượu vang đỏ</a
+              >
+            </li>
+            <li class="px-8 hover:bg-[rgba(255,255,255,0.1)] py-6">
+              <a href="./introduce.html" class="py-3 uppercase">thông tin</a>
+            </li>
+            <li class="px-8 hover:bg-[rgba(255,255,255,0.1)] py-6">
+              <a href="./blog.html" class="py-3 uppercase">Blog</a>
+            </li>
+            <li class="px-8 hover:bg-[rgba(255,255,255,0.1)] py-6">
+              <a href="./contact.html" class="py-3 uppercase">Liên hệ</a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="menu--moblie_container relative lg:hidden">
+          <div class="menu--moblie_icon p-4">
+            <i class="fa-solid fa-bars text-white text-lg"></i>
+          </div>
+          <ul
+            class="absolute w-[250px] bg-[#efeff0] top-12 right-3 menu-mobile text-cyan-700 rounded-md shadow-md"
+          >
+            <li class="px-8 hover:bg-[rgba(0,0,0,0.1)] py-3">
+              <a href="#" class="py-3 uppercase">Trang chủ</a>
+            </li>
+            <li class="px-8 hover:bg-[rgba(0,0,0,0.1)] py-3">
+              <a href="./filter-product.html" class="py-3 uppercase"
+                >Rượu vang trắng</a
+              >
+            </li>
+            <li class="px-8 hover:bg-[rgba(0,0,0,0.1)] py-3">
+              <a href="./filter-product.html" class="py-3 uppercase"
+                >Rượu vang đỏ</a
+              >
+            </li>
+            <li class="px-8 hover:bg-[rgba(0,0,0,0.1)] py-3">
+              <a href="./filter-product.html" class="py-3 uppercase"
+                >Champane</a
+              >
+            </li>
+            <li class="px-8 hover:bg-[rgba(0,0,0,0.1)] py-3">
+              <a href="./blog.html" class="py-3 uppercase">Blog</a>
+            </li>
+            <li class="px-8 hover:bg-[rgba(0,0,0,0.1)] py-3">
+              <a href="./contact.html" class="py-3 uppercase">Liên hệ</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- Section Blog -->
+    <section class="mx-auto w-full max-w-7xl p-4">
+      <div class="mb-4">
+        <a href="./home.html">Trang chủ</a>
+      <span>/</span>
+      <span class="text-red-500">Blog</span>
+      </div>
+      <div class="block--list grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <div class="flex flex-col items-center p-3 shadow-md rounded-md">
+          <img
+            class="w-[400px] h-[230px] object-cover"
+            src="../assets/images/decorate/blog2.jpg"
+            alt="blog1"
+          />
+          <h4 class="uppercase py-4 font-bold text-[#f25e23] text-center">
+            Vang Thăng Long classic
+          </h4>
+          <p class="max-w-[400px] text-center text-gray-500">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Doloribus distinctio explicabo velit, asperiores esse eligendi
+            earum corrupti voluptatibus maiores eveniet numquam adipisci
+            tenetur animi reprehenderit. Ab, et cumque. Error, molestiae!
+          </p>
+          <a
+            class="my-3 bg-[#1f2937] text-white py-2 text-center rounded-md w-[80%]"
+            href="./blog.html"
+            >Read more</a
+          >
+        </div>
+        <div class="flex flex-col items-center p-3 shadow-md rounded-md">
+          <img
+            class="w-[400px] h-[230px] object-cover"
+            src="../assets/images/decorate/blog2.jpg"
+            alt="blog1"
+          />
+          <h4 class="uppercase py-4 font-bold text-[#f25e23] text-center">
+            Vang Thăng Long classic
+          </h4>
+          <p class="max-w-[400px] text-center text-gray-500">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Doloribus distinctio explicabo velit, asperiores esse eligendi
+            earum corrupti voluptatibus maiores eveniet numquam adipisci
+            tenetur animi reprehenderit. Ab, et cumque. Error, molestiae!
+          </p>
+          <a
+            class="my-3 bg-[#1f2937] text-white py-2 text-center rounded-md w-[80%]"
+            href="./blog.html"
+            >Read more</a
+          >
+        </div>
+        <div class="flex flex-col items-center p-3 shadow-md rounded-md">
+          <img
+            class="w-[400px] h-[230px] object-cover"
+            src="../assets/images/decorate/blog2.jpg"
+            alt="blog1"
+          />
+          <h4 class="uppercase py-4 font-bold text-[#f25e23] text-center">
+            Vang Thăng Long classic
+          </h4>
+          <p class="max-w-[400px] text-center text-gray-500">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Doloribus distinctio explicabo velit, asperiores esse eligendi
+            earum corrupti voluptatibus maiores eveniet numquam adipisci
+            tenetur animi reprehenderit. Ab, et cumque. Error, molestiae!
+          </p>
+          <a
+            class="my-3 bg-[#1f2937] text-white py-2 text-center rounded-md w-[80%]"
+            href="./blog.html"
+            >Read more</a
+          >
+        </div>
+        <div class="flex flex-col items-center p-3 shadow-md rounded-md">
+          <img
+            class="w-[400px] h-[230px] object-cover"
+            src="../assets/images/decorate/blog2.jpg"
+            alt="blog1"
+          />
+          <h4 class="uppercase py-4 font-bold text-[#f25e23] text-center">
+            Vang Thăng Long classic
+          </h4>
+          <p class="max-w-[400px] text-center text-gray-500">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Doloribus distinctio explicabo velit, asperiores esse eligendi
+            earum corrupti voluptatibus maiores eveniet numquam adipisci
+            tenetur animi reprehenderit. Ab, et cumque. Error, molestiae!
+          </p>
+          <a
+            class="my-3 bg-[#1f2937] text-white py-2 text-center rounded-md w-[80%]"
+            href="./blog.html"
+            >Read more</a
+          >
+        </div>
+        <div class="flex flex-col items-center p-3 shadow-md rounded-md">
+          <img
+            class="w-[400px] h-[230px] object-cover"
+            src="../assets/images/decorate/blog2.jpg"
+            alt="blog1"
+          />
+          <h4 class="uppercase py-4 font-bold text-[#f25e23] text-center">
+            Vang Thăng Long classic
+          </h4>
+          <p class="max-w-[400px] text-center text-gray-500">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Doloribus distinctio explicabo velit, asperiores esse eligendi
+            earum corrupti voluptatibus maiores eveniet numquam adipisci
+            tenetur animi reprehenderit. Ab, et cumque. Error, molestiae!
+          </p>
+          <a
+            class="my-3 bg-[#1f2937] text-white py-2 text-center rounded-md w-[80%]"
+            href="./blog.html"
+            >Read more</a
+          >
+        </div>
+        <div class="flex flex-col items-center p-3 shadow-md rounded-md">
+          <img
+            class="w-[400px] h-[230px] object-cover"
+            src="../assets/images/decorate/blog2.jpg"
+            alt="blog1"
+          />
+          <h4 class="uppercase py-4 font-bold text-[#f25e23] text-center">
+            Vang Thăng Long classic
+          </h4>
+          <p class="max-w-[400px] text-center text-gray-500">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Doloribus distinctio explicabo velit, asperiores esse eligendi
+            earum corrupti voluptatibus maiores eveniet numquam adipisci
+            tenetur animi reprehenderit. Ab, et cumque. Error, molestiae!
+          </p>
+          <a
+            class="my-3 bg-[#1f2937] text-white py-2 text-center rounded-md w-[80%]"
+            href="./blog.html"
+            >Read more</a
+          >
+        </div>
+        <div class="flex flex-col items-center p-3 shadow-md rounded-md">
+          <img
+            class="w-[400px] h-[230px] object-cover"
+            src="../assets/images/decorate/blog2.jpg"
+            alt="blog1"
+          />
+          <h4 class="uppercase py-4 font-bold text-[#f25e23] text-center">
+            Vang Thăng Long classic
+          </h4>
+          <p class="max-w-[400px] text-center text-gray-500">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Doloribus distinctio explicabo velit, asperiores esse eligendi
+            earum corrupti voluptatibus maiores eveniet numquam adipisci
+            tenetur animi reprehenderit. Ab, et cumque. Error, molestiae!
+          </p>
+          <a
+            class="my-3 bg-[#1f2937] text-white py-2 text-center rounded-md w-[80%]"
+            href="./blog.html"
+            >Read more</a
+          >
+        </div>
+        <div class="flex flex-col items-center p-3 shadow-md rounded-md">
+          <img
+            class="w-[400px] h-[230px] object-cover"
+            src="../assets/images/decorate/blog2.jpg"
+            alt="blog1"
+          />
+          <h4 class="uppercase py-4 font-bold text-[#f25e23] text-center">
+            Vang Thăng Long classic
+          </h4>
+          <p class="max-w-[400px] text-center text-gray-500">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Doloribus distinctio explicabo velit, asperiores esse eligendi
+            earum corrupti voluptatibus maiores eveniet numquam adipisci
+            tenetur animi reprehenderit. Ab, et cumque. Error, molestiae!
+          </p>
+          <a
+            class="my-3 bg-[#1f2937] text-white py-2 text-center rounded-md w-[80%]"
+            href="./blog.html"
+            >Read more</a
+          >
+        </div>
+        <div class="flex flex-col items-center p-3 shadow-md rounded-md">
+          <img
+            class="w-[400px] h-[230px] object-cover"
+            src="../assets/images/decorate/blog2.jpg"
+            alt="blog1"
+          />
+          <h4 class="uppercase py-4 font-bold text-[#f25e23] text-center">
+            Vang Thăng Long classic
+          </h4>
+          <p class="max-w-[400px] text-center text-gray-500">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Doloribus distinctio explicabo velit, asperiores esse eligendi
+            earum corrupti voluptatibus maiores eveniet numquam adipisci
+            tenetur animi reprehenderit. Ab, et cumque. Error, molestiae!
+          </p>
+          <a
+            class="my-3 bg-[#1f2937] text-white py-2 text-center rounded-md w-[80%]"
+            href="./blog.html"
+            >Read more</a
+          >
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="block bg-[#f7f7f7] mt-10">
+      <div class="px-5 md:px-10">
+        <div class="mx-auto w-full max-w-7xl">
+          <div class="py-16 md:py-12">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+              <div
+                class="flex flex-col gap-4 items-center w-full text-center pb-4"
+              >
+                <a href="#" class="inline-block max-w-full">
+                  <img
+                    src="../assets/images/decorate/wine-logo1.png"
+                    alt="logo"
+                    class="inline-block w-[100px]"
+                  />
+                </a>
+                <div>
+                  <span>
+                    <span
+                      ><i
+                        class="fa-solid fa-location-dot mr-2 text-[#e62829]"
+                      ></i
+                    ></span>
+                    <span class="text-[#636262]"
+                      >Tòa nhà FHome 14 Lý Thường Kiệt</span
+                    >
+                  </span>
+                  <br />
+                  <span>
+                    <span>
+                      <i class="fa-solid fa-envelope mr-2 text-[#feb207]"></i>
+                    </span>
+                    <a class="text-[#636262]" href="nhthien.dut@gmail.com">
+                      winepro.contact@gmail.com
+                    </a>
+                  </span>
+                </div>
+                <div class="flex gap-4">
+                  <i class="fa-brands fa-square-facebook text-[#0035bb]"></i>
+                  <i class="fa-brands fa-instagram text-[#f30395]"></i>
+                  <i class="fa-brands fa-twitter text-[#1c9cea]"></i>
+                </div>
+              </div>
+              <div
+                class="flex flex-col items-center font-semibold pt-4 sm:pt-0"
+              >
+                <div class="mb-4 ml-0 mr-0 lg:ml-0 lg:mr-0">
+                  <div class="font-bold uppercase">Hỗ trợ</div>
+                </div>
+                <a
+                  href="#"
+                  class="py-2 font-normal text-[#636262] transition hover:text-[#302dd7]"
+                >
+                  Trung tâm trợ giúp
+                </a>
+                <a
+                  href="#"
+                  class="py-2 font-normal text-[#636262] transition hover:text-[#302dd7]"
+                >
+                  Wine Pro
+                </a>
+                <a
+                  href="#"
+                  class="py-2 font-normal text-[#636262] transition hover:text-[#302dd7]"
+                >
+                  Chính sách bán hàng
+                </a>
+                <a
+                  href="#"
+                  class="py-2 font-normal text-[#636262] transition hover:text-[#302dd7]"
+                >
+                  Phương thức vận chuyển
+                </a>
+              </div>
+              <div
+                class="flex flex-col items-center font-semibold pt-4 sm:pt-0"
+              >
+                <div class="mb-4">
+                  <div class="font-bold uppercase">Đón tiếp khách</div>
+                </div>
+                <a
+                  href="#"
+                  class="py-2 font-normal text-[#636262] transition hover:text-[#302dd7]"
+                >
+                  Chính sách nhân viên
+                </a>
+                <a
+                  href="#"
+                  class="py-2 font-normal text-[#636262] transition hover:text-[#302dd7]"
+                >
+                  Mua bán trực tuyến
+                </a>
+                <a
+                  href="#"
+                  class="py-2 font-normal text-[#636262] transition hover:text-[#302dd7]"
+                >
+                  Tài nguyên về đón tiếp khách
+                </a>
+                <a
+                  href="#"
+                  class="py-2 font-normal text-[#636262] transition hover:text-[#302dd7]"
+                >
+                  Diễn đàn cộng đồng
+                </a>
+              </div>
+              <div
+                class="flex flex-col items-center font-semibold pt-4 sm:pt-0"
+              >
+                <div class="mb-4">
+                  <div class="font-bold uppercase">Wine Pro</div>
+                </div>
+                <a
+                  href="#"
+                  class="py-2 font-normal text-[#636262] transition hover:text-[#302dd7]"
+                >
+                  Trang tin tức
+                </a>
+                <a
+                  href="#"
+                  class="py-2 font-normal text-[#636262] transition hover:text-[#302dd7]"
+                >
+                  Tính năng mới
+                </a>
+                <a
+                  href="#"
+                  class="py-2 font-normal text-[#636262] transition hover:text-[#302dd7]"
+                >
+                  Cơ hội nghề nghiệp
+                </a>
+                <a
+                  href="#"
+                  class="py-2 font-normal text-[#636262] transition hover:text-[#302dd7]"
+                >
+                  Nhà đầu tư
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
