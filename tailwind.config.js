@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./views/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        slide: "url('./assets/images/decorate/slide2.jpg')",
+      },
+    },
   },
   plugins: [],
 };

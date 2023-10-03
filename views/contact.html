@@ -20,8 +20,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/tailwind.css" />
     <link rel="stylesheet" href="../assets/css/home.css" />
     <title>Contact</title>
   </head>
@@ -95,7 +96,7 @@
         <nav class="hidden lg:flex">
           <ul class="flex text-white">
             <li class="px-8 hover:bg-[rgba(255,255,255,0.1)] py-6">
-              <a href="#" class="py-3 uppercase text-[#fcce00]">Trang chủ</a>
+              <a href="/" class="py-3 uppercase text-[#fcce00]">Trang chủ</a>
             </li>
             <li class="px-8 hover:bg-[rgba(255,255,255,0.1)] py-6">
               <a href="./filter-product.html" class="py-3 uppercase"
@@ -156,7 +157,7 @@
     <!-- Section Contact -->
     <section class="mx-auto w-full max-w-7xl p-4">
       <div>
-        <a href="./home.html" class="text-sm">Trang chủ</a>
+        <a href="/" class="text-sm">Trang chủ</a>
         <span>/</span>
         <span class="text-sm text-red-500">Liên hệ</span>
       </div>
@@ -215,7 +216,9 @@
       </div>
 
       <div class="max-w-[700px] mx-auto my-6">
-        <p class="text-center py-6 uppercase font-bold text-cyan-600">Gửi thông báo cho chúng tôi</p>
+        <p class="text-center py-6 uppercase font-bold text-cyan-600">
+          Gửi thông báo cho chúng tôi
+        </p>
         <form method="POST">
           <div class="flex items-center justify-between gap-6 py-2">
             <label class="min-w-[100px]" for="name">Your name</label>
@@ -249,10 +252,20 @@
           </div>
           <div class="flex items-center justify-between gap-6 py-2">
             <label class="min-w-[100px]" for="message">Message</label>
-            <textarea id="message" name="w3review" rows="4" class="w-full border rounded-md p-4">
+            <textarea
+              id="message"
+              name="w3review"
+              rows="4"
+              class="w-full border rounded-md p-4"
+            >
             </textarea>
           </div>
-          <button class="py-3 px-6 bg-cyan-500 rounded-md text-white my-4 text-center cursor-pointer float-right " href="#">Submit</button>
+          <button
+            class="py-3 px-6 bg-cyan-500 rounded-md text-white my-4 text-center cursor-pointer float-right"
+            href="#"
+          >
+            Submit
+          </button>
         </form>
       </div>
     </section>
