@@ -21,8 +21,8 @@
       referrerpolicy="no-referrer"
     />
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- <link rel="stylesheet" href="./assets/css/build.css" /> -->
     <link rel="stylesheet" href="./assets/css/base.css" />
+    <link rel="stylesheet" href="./assets/css/tailwind.css" />
     <link rel="stylesheet" href="./assets/css/home.css" />
     <title>Home Page</title>
   </head>
@@ -30,7 +30,7 @@
     <!-- Top Header & Banner -->
     <header>
       <div
-        class="bg-[url('../assets/images/decorate/slide1.jpg')] h-[600px] bg-no-repeat bg-center bg-cover"
+        class="bg-[url('./assets/images/decorate/slide1.jpg')] h-[600px] bg-no-repeat bg-center bg-cover"
       >
         <div
           class="max-w-[1280px] mx-auto px-4 flex items-center justify-between bg-[rgba(0,0,0,0.2)]"
@@ -98,7 +98,7 @@
         <nav class="hidden lg:flex">
           <ul class="flex text-white">
             <li class="px-8 hover:bg-[rgba(255,255,255,0.1)] py-6">
-              <a href="#" class="py-3 uppercase text-[#fcce00]">Trang chủ</a>
+              <a href="/" class="py-3 uppercase text-[#fcce00]">Trang chủ</a>
             </li>
             <li class="px-8 hover:bg-[rgba(255,255,255,0.1)] py-6">
               <a href="./views/filter-product.html" class="py-3 uppercase"
@@ -111,7 +111,9 @@
               >
             </li>
             <li class="px-8 hover:bg-[rgba(255,255,255,0.1)] py-6">
-              <a href="./views/introduce.html" class="py-3 uppercase">thông tin</a>
+              <a href="./views/introduce.html" class="py-3 uppercase"
+                >thông tin</a
+              >
             </li>
             <li class="px-8 hover:bg-[rgba(255,255,255,0.1)] py-6">
               <a href="./views/blog.html" class="py-3 uppercase">Blog</a>
@@ -160,7 +162,7 @@
     <section class="relative">
       <img
         class="absolute w-[200px] top-0 left-0 z-[-10]"
-        src="../assets/images/decorate/grape-purple.jpg"
+        src="./assets/images/decorate/grape-purple.jpg"
         alt="grape-purple"
       />
       <div
@@ -172,7 +174,7 @@
           src="./assets/images/decorate/title-dark.png"
           alt="title-dark"
         />
-        <p class="py-5 text-center">
+        <p class="py-5 text-center text-gray-700">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta vero
           consectetur neque provident maiores dolore magnam ipsum numquam quam
           voluptate, incidunt itaque exercitationem qui minima officiis sit
