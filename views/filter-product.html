@@ -13,11 +13,688 @@
       href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/tailwind.css" />
+    <link rel="stylesheet" href="../assets/css/login.css" />
     <title>Products By Category</title>
   </head>
   <body>
-    <h1 class="">Products By Category</h1>
+    <!-- Header top -->
+    <header>
+      <div class="max-w-[1280px] mx-auto px-4">
+        <div
+          class="max-w-[1280px] mx-auto px-4 flex items-center justify-between"
+        >
+          <nav class="menu--moblie_container relative md:hidden">
+            <div class="menu--moblie_icon p-4">
+              <i class="fa-solid fa-bars text-lg"></i>
+            </div>
+            <ul
+              class="absolute w-[250px] bg-[#efeff0] top-12 left-3 menu-mobile rounded-md z-10 py-2"
+            >
+              <li class="px-5 hover:bg-[rgba(0,0,0,0.2)] py-3">
+                <a href="#" class="py-3">Tài khoản của tôi</a>
+              </li>
+              <li class="px-5 hover:bg-[rgba(0,0,0,0.2)] py-3">
+                <a href="./cart.html" class="py-3">Giỏ hàng</a>
+              </li>
+              <li class="px-5 hover:bg-[rgba(0,0,0,0.2)] py-3">
+                <a href="./login.html" class="py-3">Đăng nhập</a>
+              </li>
+              <li class="px-5 hover:bg-[rgba(0,0,0,0.2)] py-3">
+                <a href="./register.html" class="py-3">Đăng kí</a>
+              </li>
+            </ul>
+          </nav>
+          <nav class="hidden md:flex">
+            <ul class="flex">
+              <li class="px-5 hover:bg-[rgba(0,0,0,0.2)] py-3">
+                <a href="#" class="py-3">Tài khoản của tôi</a>
+              </li>
+              <li class="px-5 hover:bg-[rgba(0,0,0,0.2)] py-3">
+                <a href="./cart.html" class="py-3">Giỏ hàng</a>
+              </li>
+              <li class="px-5 hover:bg-[rgba(0,0,0,0.2)] py-3">
+                <a href="./login.html" class="py-3">Đăng nhập</a>
+              </li>
+              <li class="px-5 hover:bg-[rgba(0,0,0,0.2)] py-3">
+                <a href="./register.html" class="py-3">Đăng kí</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="relative">
+            <input
+              type="text"
+              placeholder="Tìm kiếm"
+              class="bg-white py-2 px-4 rounded-md border"
+            />
+            <span class="absolute top-2 right-4">
+              <i class="fa-solid fa-magnifying-glass text-gray-600"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Header -->
+    <header class="bg-black h-[100px] sticky top-0 right-0 left-0 z-2">
+      <div
+        class="max-w-[1280px] mx-auto px-4 flex items-center justify-between lg:justify-center"
+      >
+        <img
+          class="w-[120px]"
+          src="../assets//images//decorate/wine-logo1.png"
+          alt="logo"
+        />
+        <nav class="hidden lg:flex">
+          <ul class="flex text-white">
+            <li class="px-8 hover:bg-[rgba(255,255,255,0.1)] py-6">
+              <a href="/" class="py-3 uppercase text-[#fcce00]">Trang chủ</a>
+            </li>
+            <li class="px-8 hover:bg-[rgba(255,255,255,0.1)] py-6">
+              <a href="./filter-product.html" class="py-3 uppercase"
+                >Rượu vang trắng</a
+              >
+            </li>
+            <li class="px-8 hover:bg-[rgba(255,255,255,0.1)] py-6">
+              <a href="./filter-product.html" class="py-3 uppercase"
+                >Rượu vang đỏ</a
+              >
+            </li>
+            <li class="px-8 hover:bg-[rgba(255,255,255,0.1)] py-6">
+              <a href="./introduce.html" class="py-3 uppercase">thông tin</a>
+            </li>
+            <li class="px-8 hover:bg-[rgba(255,255,255,0.1)] py-6">
+              <a href="./blog.html" class="py-3 uppercase">Blog</a>
+            </li>
+            <li class="px-8 hover:bg-[rgba(255,255,255,0.1)] py-6">
+              <a href="./contact.html" class="py-3 uppercase">Liên hệ</a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="menu--moblie_container relative lg:hidden">
+          <div class="menu--moblie_icon p-4">
+            <i class="fa-solid fa-bars text-white text-lg"></i>
+          </div>
+          <ul
+            class="absolute w-[250px] bg-[#efeff0] top-12 right-3 menu-mobile text-cyan-700 rounded-md shadow-md"
+          >
+            <li class="px-8 hover:bg-[rgba(0,0,0,0.1)] py-3">
+              <a href="/" class="py-3 uppercase">Trang chủ</a>
+            </li>
+            <li class="px-8 hover:bg-[rgba(0,0,0,0.1)] py-3">
+              <a href="./filter-product.html" class="py-3 uppercase"
+                >Rượu vang trắng</a
+              >
+            </li>
+            <li class="px-8 hover:bg-[rgba(0,0,0,0.1)] py-3">
+              <a href="./filter-product.html" class="py-3 uppercase"
+                >Rượu vang đỏ</a
+              >
+            </li>
+            <li class="px-8 hover:bg-[rgba(0,0,0,0.1)] py-3">
+              <a href="./filter-product.html" class="py-3 uppercase"
+                >Champane</a
+              >
+            </li>
+            <li class="px-8 hover:bg-[rgba(0,0,0,0.1)] py-3">
+              <a href="./introduce.html" class="py-3 uppercase"
+                >Thông tin</a
+              >
+            </li>
+            <li class="px-8 hover:bg-[rgba(0,0,0,0.1)] py-3">
+              <a href="./blog.html" class="py-3 uppercase">Blog</a>
+            </li>
+            <li class="px-8 hover:bg-[rgba(0,0,0,0.1)] py-3">
+              <a href="./contact.html" class="py-3 uppercase">Liên hệ</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Banner -->
+    <div class="mx-auto w-full max-w-7xl p-4">
+      <div class="py-6">
+        <a href="/" class="text-sm">Trang chủ</a>
+        <span class="text-sm">/</span>
+        <span class="text-sm">Sản phầm</span>
+        <span class="text-sm">/</span>
+        <span class="text-sm text-red-500">Rượu vang đỏ</span>
+      </div>
+      <img
+        class="mx-auto w-full"
+        src="../assets/images/decorate/slide3.jpg"
+        alt="banner"
+      />
+    </div>
+
+    <!-- Filter product -->
+    <section class="mx-auto w-full max-w-7xl p-4">
+      <div class="flex py-4 gap-4">
+        <div class="w-52 md:w-64 max-w-1/4">
+          <div>
+            <h3 class="uppercase text-2xl font-bold pb-2">Danh mục sản phầm</h3>
+            <img
+              src="../assets/images/decorate/titleleft-dark.png"
+              alt="titleleft"
+            />
+          </div>
+          <ul class="text-gray-500 pt-6">
+            <h5 class="uppercase text-xl py-2">Rượu ngoại</h5>
+            <li
+              class="py-1 cursor-pointer hover:text-[#feb207] hover:list-disc duration-200 transition-all font-thin"
+            >
+              <span>Rượu Chivas</span>
+              <span>(26)</span>
+            </li>
+            <li
+              class="py-1 cursor-pointer hover:text-[#feb207] hover:list-disc duration-200 transition-all font-thin"
+            >
+              <span>Rượu Chivas</span>
+              <span>(26)</span>
+            </li>
+            <li
+              class="py-1 cursor-pointer hover:text-[#feb207] hover:list-disc duration-200 transition-all font-thin"
+            >
+              <span>Rượu Chivas</span>
+              <span>(26)</span>
+            </li>
+            <li
+              class="py-1 cursor-pointer hover:text-[#feb207] hover:list-disc duration-200 transition-all font-thin"
+            >
+              <span>Rượu Chivas</span>
+              <span>(26)</span>
+            </li>
+            <li
+              class="py-1 cursor-pointer hover:text-[#feb207] hover:list-disc duration-200 transition-all font-thin"
+            >
+              <span>Rượu Chivas</span>
+              <span>(26)</span>
+            </li>
+            <li
+              class="py-1 cursor-pointer hover:text-[#feb207] hover:list-disc duration-200 transition-all font-thin"
+            >
+              <span>Rượu Chivas</span>
+              <span>(26)</span>
+            </li>
+            <li
+              class="py-1 cursor-pointer hover:text-[#feb207] hover:list-disc duration-200 transition-all font-thin"
+            >
+              <span>Rượu Chivas</span>
+              <span>(26)</span>
+            </li>
+            <li
+              class="py-1 cursor-pointer hover:text-[#feb207] hover:list-disc duration-200 transition-all font-thin"
+            >
+              <span>Rượu Chivas</span>
+              <span>(26)</span>
+            </li>
+            <li
+              class="py-1 cursor-pointer hover:text-[#feb207] hover:list-disc duration-200 transition-all font-thin"
+            >
+              <span>Rượu Chivas</span>
+              <span>(26)</span>
+            </li>
+            <li
+              class="py-1 cursor-pointer hover:text-[#feb207] hover:list-disc duration-200 transition-all font-thin"
+            >
+              <span>Rượu Chivas</span>
+              <span>(26)</span>
+            </li>
+          </ul>
+          <div class="py-4">
+            <h3 class="uppercase text-xl pb-2">So Sánh sản phẩm</h3>
+            <img
+              src="../assets/images/decorate/titleleft-dark.png"
+              alt="titleleft"
+            />
+            <p class="pt-4 text-gray-500 font-thin">
+              Bạn chưa có sản phẩm nào để so sánh
+            </p>
+          </div>
+          <div class="py-4">
+            <h3 class="uppercase text-xl pb-2">Tag sản phẩm</h3>
+            <img
+              src="../assets/images/decorate/titleleft-dark.png"
+              alt="titleleft"
+            />
+            <div class="flex gap-3 flex-wrap py-4">
+              <span
+                class="p-1 border text-xs text-white cursor-pointer bg-[#feb207]"
+                >Đồng hồ</span
+              >
+              <span class="p-1 border text-xs text-gray-500 cursor-pointer"
+                >Túi</span
+              >
+              <span class="p-1 border text-xs text-gray-500 cursor-pointer"
+                >Phụ kiện</span
+              >
+              <span class="p-1 border text-xs text-gray-500 cursor-pointer"
+                >Giày</span
+              >
+              <span class="p-1 border text-xs text-gray-500 cursor-pointer"
+                >Sandal</span
+              >
+              <span class="p-1 border text-xs text-gray-500 cursor-pointer"
+                >Áo sơ mi</span
+              >
+              <span class="p-1 border text-xs text-gray-500 cursor-pointer"
+                >Thời trang nữ</span
+              >
+              <span class="p-1 border text-xs text-gray-500 cursor-pointer"
+                >Nước hoa</span
+              >
+            </div>
+          </div>
+          <img
+            class="w-[90%]"
+            src="../assets/images/decorate/product11.jpg"
+            alt="product11"
+          />
+        </div>
+        <div class="flex-1">
+          <div class="border flex justify-between p-3">
+            <div class="flex items-center gap-4 text-gray-500">
+              <span class="cursor-pointer">
+                <i class="fa-solid fa-grip text-xl text-[#feb207]"></i>
+              </span>
+              <span class="cursor-pointer">
+                <i class="fa-solid fa-list text-xl"></i>
+              </span>
+            </div>
+            <div class="flex gap-2 text-gray-500 font-thin">
+              <span>
+                <i class="fa-solid fa-caret-left"></i>
+              </span>
+              <span>1</span>
+              <span class="text-[#feb207]">2</span>
+              <span>3</span>
+              <span>4</span>
+              <span>5</span>
+              <span>
+                <i class="fa-solid fa-caret-right"></i>
+              </span>
+            </div>
+          </div>
+
+          <!-- section product -->
+          <!-- Grid: grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 lg:gap-6 mt-12 -->
+          <!-- <div class="text-center flex flex-col shadow-md py-4 rounded-md">
+              <img
+                class="w-[200px] mx-auto"
+                src="../assets/images/products/1.jpg"
+                alt=""
+              />
+              <h4 class="py-3 uppercase">Rượu vang đà lạt</h4>
+              <div class="py-4">
+                <span class="text-[#f25e23] pr-2">370.000đ</span>
+                <span class="line-through text-gray-600">450.000đ</span>
+              </div>
+              <button
+                type="button"
+                class="block text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mx-12 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+              >
+                Add to cart
+              </button>
+            </div> -->
+
+          <!-- List : grid grid-cols-1 gap-6 mt-12-->
+          <!-- 
+            <div class="flex flex-col md:flex-row shadow-md py-4 rounded-md">
+              <img
+                class="w-[200px]"
+                src="../assets/images/products/1.jpg"
+                alt=""
+              />
+              <div class="p-6">
+                <h4 class="uppercase text-xl">Rượu vang đà lạt</h4>
+                <div class="py-2">
+                  <p class="text-3xl text-[#f25e23] py-3">370.000đ</p>
+                  <p class="pb-2 text-gray-500">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Possimus deserunt illo saepe, velit aliquid ipsam atque
+                    blanditiis ex dolorem quidem obcaecati eum reiciendis amet
+                    facilis veritatis inventore magnam dicta repellat.
+                  </p>
+                </div>
+                <div class="flex items-center gap-2 md:gap-6">
+                  <button
+                    type="button"
+                    class="block text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 float-left"
+                  >
+                    Add to cart
+                  </button>
+                  <span class="text-sm text-gray-500">
+                    <i class="fa-solid fa-heart text-[#f40177]"></i>
+                    Yêu thích
+                  </span>
+                  <span class="pl-3 text-sm text-gray-500">
+                    <i class="fa-solid fa-code-compare text-[#0a5a99]"></i>
+                    So Sánh
+                  </span>
+                </div>
+              </div>
+            </div>
+           -->
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 lg:gap-6 mt-12"
+          >
+            <div class="text-center flex flex-col shadow-md py-4 rounded-md">
+              <img
+                class="w-[200px] mx-auto"
+                src="../assets/images/products/1.jpg"
+                alt=""
+              />
+              <h4 class="py-3 uppercase">Rượu vang đà lạt</h4>
+              <div class="py-4">
+                <span class="text-[#f25e23] pr-2">370.000đ</span>
+                <span class="line-through text-gray-600">450.000đ</span>
+              </div>
+              <button
+                type="button"
+                class="block text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-thin rounded-lg text-sm px-5 py-2.5 mx-12 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+              >
+                Add to cart
+              </button>
+            </div>
+            <div class="text-center flex flex-col shadow-md py-4 rounded-md">
+              <img
+                class="w-[200px] mx-auto"
+                src="../assets/images/products/1.jpg"
+                alt=""
+              />
+              <h4 class="py-3 uppercase">Rượu vang đà lạt</h4>
+              <div class="py-4">
+                <span class="text-[#f25e23] pr-2">370.000đ</span>
+                <span class="line-through text-gray-600">450.000đ</span>
+              </div>
+              <button
+                type="button"
+                class="block text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-thin rounded-lg text-sm px-5 py-2.5 mx-12 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+              >
+                Add to cart
+              </button>
+            </div>
+            <div class="text-center flex flex-col shadow-md py-4 rounded-md">
+              <img
+                class="w-[200px] mx-auto"
+                src="../assets/images/products/1.jpg"
+                alt=""
+              />
+              <h4 class="py-3 uppercase">Rượu vang đà lạt</h4>
+              <div class="py-4">
+                <span class="text-[#f25e23] pr-2">370.000đ</span>
+                <span class="line-through text-gray-600">450.000đ</span>
+              </div>
+              <button
+                type="button"
+                class="block text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-thin rounded-lg text-sm px-5 py-2.5 mx-12 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+              >
+                Add to cart
+              </button>
+            </div>
+            <div class="text-center flex flex-col shadow-md py-4 rounded-md">
+              <img
+                class="w-[200px] mx-auto"
+                src="../assets/images/products/1.jpg"
+                alt=""
+              />
+              <h4 class="py-3 uppercase">Rượu vang đà lạt</h4>
+              <div class="py-4">
+                <span class="text-[#f25e23] pr-2">370.000đ</span>
+                <span class="line-through text-gray-600">450.000đ</span>
+              </div>
+              <button
+                type="button"
+                class="block text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-thin rounded-lg text-sm px-5 py-2.5 mx-12 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+              >
+                Add to cart
+              </button>
+            </div>
+            <div class="text-center flex flex-col shadow-md py-4 rounded-md">
+              <img
+                class="w-[200px] mx-auto"
+                src="../assets/images/products/1.jpg"
+                alt=""
+              />
+              <h4 class="py-3 uppercase">Rượu vang đà lạt</h4>
+              <div class="py-4">
+                <span class="text-[#f25e23] pr-2">370.000đ</span>
+                <span class="line-through text-gray-600">450.000đ</span>
+              </div>
+              <button
+                type="button"
+                class="block text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-thin rounded-lg text-sm px-5 py-2.5 mx-12 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+              >
+                Add to cart
+              </button>
+            </div>
+            <div class="text-center flex flex-col shadow-md py-4 rounded-md">
+              <img
+                class="w-[200px] mx-auto"
+                src="../assets/images/products/1.jpg"
+                alt=""
+              />
+              <h4 class="py-3 uppercase">Rượu vang đà lạt</h4>
+              <div class="py-4">
+                <span class="text-[#f25e23] pr-2">370.000đ</span>
+                <span class="line-through text-gray-600">450.000đ</span>
+              </div>
+              <button
+                type="button"
+                class="block text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-thin rounded-lg text-sm px-5 py-2.5 mx-12 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+              >
+                Add to cart
+              </button>
+            </div>
+            <div class="text-center flex flex-col shadow-md py-4 rounded-md">
+              <img
+                class="w-[200px] mx-auto"
+                src="../assets/images/products/1.jpg"
+                alt=""
+              />
+              <h4 class="py-3 uppercase">Rượu vang đà lạt</h4>
+              <div class="py-4">
+                <span class="text-[#f25e23] pr-2">370.000đ</span>
+                <span class="line-through text-gray-600">450.000đ</span>
+              </div>
+              <button
+                type="button"
+                class="block text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-thin rounded-lg text-sm px-5 py-2.5 mx-12 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+              >
+                Add to cart
+              </button>
+            </div>
+            <div class="text-center flex flex-col shadow-md py-4 rounded-md">
+              <img
+                class="w-[200px] mx-auto"
+                src="../assets/images/products/1.jpg"
+                alt=""
+              />
+              <h4 class="py-3 uppercase">Rượu vang đà lạt</h4>
+              <div class="py-4">
+                <span class="text-[#f25e23] pr-2">370.000đ</span>
+                <span class="line-through text-gray-600">450.000đ</span>
+              </div>
+              <button
+                type="button"
+                class="block text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-thin rounded-lg text-sm px-5 py-2.5 mx-12 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+              >
+                Add to cart
+              </button>
+            </div>
+            <div class="text-center flex flex-col shadow-md py-4 rounded-md">
+              <img
+                class="w-[200px] mx-auto"
+                src="../assets/images/products/1.jpg"
+                alt=""
+              />
+              <h4 class="py-3 uppercase">Rượu vang đà lạt</h4>
+              <div class="py-4">
+                <span class="text-[#f25e23] pr-2">370.000đ</span>
+                <span class="line-through text-gray-600">450.000đ</span>
+              </div>
+              <button
+                type="button"
+                class="block text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-thin rounded-lg text-sm px-5 py-2.5 mx-12 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+              >
+                Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="block bg-[#f7f7f7] mt-10">
+      <div class="px-5 md:px-10">
+        <div class="mx-auto w-full max-w-7xl">
+          <div class="py-16 md:py-12">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+              <div
+                class="flex flex-col gap-4 items-center w-full text-center pb-4"
+              >
+                <a href="#" class="inline-block max-w-full">
+                  <img
+                    src="../assets/images/decorate/wine-logo1.png"
+                    alt="logo"
+                    class="inline-block w-[100px]"
+                  />
+                </a>
+                <div>
+                  <span>
+                    <span
+                      ><i
+                        class="fa-solid fa-location-dot mr-2 text-[#e62829]"
+                      ></i
+                    ></span>
+                    <span class="text-[#636262]"
+                      >Tòa nhà FHome 14 Lý Thường Kiệt</span
+                    >
+                  </span>
+                  <br />
+                  <span>
+                    <span>
+                      <i class="fa-solid fa-envelope mr-2 text-[#feb207]"></i>
+                    </span>
+                    <a class="text-[#636262]" href="nhthien.dut@gmail.com">
+                      winepro.contact@gmail.com
+                    </a>
+                  </span>
+                </div>
+                <div class="flex gap-4">
+                  <i class="fa-brands fa-square-facebook text-[#0035bb]"></i>
+                  <i class="fa-brands fa-instagram text-[#f30395]"></i>
+                  <i class="fa-brands fa-twitter text-[#1c9cea]"></i>
+                </div>
+              </div>
+              <div
+                class="flex flex-col items-center font-semibold pt-4 sm:pt-0"
+              >
+                <div class="mb-4 ml-0 mr-0 lg:ml-0 lg:mr-0">
+                  <div class="font-bold uppercase">Hỗ trợ</div>
+                </div>
+                <a
+                  href="#"
+                  class="py-2 font-normal text-[#636262] transition hover:text-[#302dd7]"
+                >
+                  Trung tâm trợ giúp
+                </a>
+                <a
+                  href="#"
+                  class="py-2 font-normal text-[#636262] transition hover:text-[#302dd7]"
+                >
+                  Wine Pro
+                </a>
+                <a
+                  href="#"
+                  class="py-2 font-normal text-[#636262] transition hover:text-[#302dd7]"
+                >
+                  Chính sách bán hàng
+                </a>
+                <a
+                  href="#"
+                  class="py-2 font-normal text-[#636262] transition hover:text-[#302dd7]"
+                >
+                  Phương thức vận chuyển
+                </a>
+              </div>
+              <div
+                class="flex flex-col items-center font-semibold pt-4 sm:pt-0"
+              >
+                <div class="mb-4">
+                  <div class="font-bold uppercase">Đón tiếp khách</div>
+                </div>
+                <a
+                  href="#"
+                  class="py-2 font-normal text-[#636262] transition hover:text-[#302dd7]"
+                >
+                  Chính sách nhân viên
+                </a>
+                <a
+                  href="#"
+                  class="py-2 font-normal text-[#636262] transition hover:text-[#302dd7]"
+                >
+                  Mua bán trực tuyến
+                </a>
+                <a
+                  href="#"
+                  class="py-2 font-normal text-[#636262] transition hover:text-[#302dd7]"
+                >
+                  Tài nguyên về đón tiếp khách
+                </a>
+                <a
+                  href="#"
+                  class="py-2 font-normal text-[#636262] transition hover:text-[#302dd7]"
+                >
+                  Diễn đàn cộng đồng
+                </a>
+              </div>
+              <div
+                class="flex flex-col items-center font-semibold pt-4 sm:pt-0"
+              >
+                <div class="mb-4">
+                  <div class="font-bold uppercase">Wine Pro</div>
+                </div>
+                <a
+                  href="#"
+                  class="py-2 font-normal text-[#636262] transition hover:text-[#302dd7]"
+                >
+                  Trang tin tức
+                </a>
+                <a
+                  href="#"
+                  class="py-2 font-normal text-[#636262] transition hover:text-[#302dd7]"
+                >
+                  Tính năng mới
+                </a>
+                <a
+                  href="#"
+                  class="py-2 font-normal text-[#636262] transition hover:text-[#302dd7]"
+                >
+                  Cơ hội nghề nghiệp
+                </a>
+                <a
+                  href="#"
+                  class="py-2 font-normal text-[#636262] transition hover:text-[#302dd7]"
+                >
+                  Nhà đầu tư
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

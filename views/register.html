@@ -38,7 +38,7 @@
               <i class="fa-solid fa-bars text-lg"></i>
             </div>
             <ul
-              class="absolute w-[250px] bg-[rgba(0,0,0,0.1)] top-12 left-3 menu-mobile rounded-md"
+              class="absolute w-[250px] bg-[#efeff0] top-12 left-3 menu-mobile rounded-md z-10 py-2"
             >
               <li class="px-5 hover:bg-[rgba(0,0,0,0.2)] py-3">
                 <a href="#" class="py-3">Tài khoản của tôi</a>
@@ -85,7 +85,7 @@
     </header>
 
     <!-- Main Header -->
-    <header class="bg-black h-[100px] sticky top-0 right-0 left-0 z-10">
+    <header class="bg-black h-[100px] sticky top-0 right-0 left-0 z-2">
       <div
         class="max-w-[1280px] mx-auto px-4 flex items-center justify-between lg:justify-center"
       >
@@ -128,7 +128,7 @@
             class="absolute w-[250px] bg-[#efeff0] top-12 right-3 menu-mobile text-cyan-700 rounded-md shadow-md"
           >
             <li class="px-8 hover:bg-[rgba(0,0,0,0.1)] py-3">
-              <a href="#" class="py-3 uppercase">Trang chủ</a>
+              <a href="/" class="py-3 uppercase">Trang chủ</a>
             </li>
             <li class="px-8 hover:bg-[rgba(0,0,0,0.1)] py-3">
               <a href="./filter-product.html" class="py-3 uppercase"
@@ -144,6 +144,9 @@
               <a href="./filter-product.html" class="py-3 uppercase"
                 >Champane</a
               >
+            </li>
+            <li class="px-8 hover:bg-[rgba(0,0,0,0.1)] py-3">
+              <a href="./introduce.html" class="py-3 uppercase">Thông tin</a>
             </li>
             <li class="px-8 hover:bg-[rgba(0,0,0,0.1)] py-3">
               <a href="./blog.html" class="py-3 uppercase">Blog</a>
@@ -170,26 +173,26 @@
             <form class="space-y-4 md:space-y-6" action="#">
               <h3 class="text-cyan-600">Thông tin cá nhân</h3>
               <div>
-                <label for="FirstName" class="block mb-2 text-sm font-medium"
+                <label for="firstName" class="block mb-2 text-sm font-medium"
                   >Your First Name</label
                 >
                 <input
-                  type="FirstName"
-                  name="FirstName"
-                  id="FirstName"
+                  type="text"
+                  name="firstName"
+                  id="firstName"
                   class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"
                   placeholder="Nguyen Huu"
                   required=""
                 />
               </div>
               <div>
-                <label for="LastName" class="block mb-2 text-sm font-medium"
+                <label for="lastName" class="block mb-2 text-sm font-medium"
                   >Your Last Name</label
                 >
                 <input
-                  type="LastName"
-                  name="LastName"
-                  id="LastName"
+                  type="text"
+                  name="lastName"
+                  id="lastName"
                   class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"
                   placeholder="Thien"
                   required=""

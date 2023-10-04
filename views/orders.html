@@ -20,11 +20,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <link rel="stylesheet" href="../assets/css/base.css" />
     <link rel="stylesheet" href="../assets/css/tailwind.css" />
-    <link rel="stylesheet" href="../assets/css/home.css" />
-    <title>Blog</title>
+    <link rel="stylesheet" href="../assets/css/login.css" />
+
+    <title>Order List</title>
   </head>
   <body>
     <!-- Header top -->
@@ -160,216 +160,157 @@
         </nav>
       </div>
     </header>
-    <!-- Section Blog -->
+
+    <!-- Order  Section -->
+
     <section class="mx-auto w-full max-w-7xl p-4">
-      <div class="mb-4">
-        <a href="/">Trang chủ</a>
-        <span>/</span>
-        <span class="text-red-500">Blog</span>
+      <div class="py-8">
+        <div>
+          <a href="/" class="text-sm">Trang chủ</a>
+          <span class="text-sm">/</span>
+          <span class="text-sm text-red-500">Danh sách đơn hàng</span>
+        </div>
+        <h4 class="uppercase text-2xl pt-4 pb-2">Đơn hàng</h4>
+        <img
+          src="../assets/images/decorate/titleleft-dark.png"
+          alt="titleleft"
+        />
       </div>
-      <div
-        class="block--list grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"
-      >
-        <div class="flex flex-col items-center p-3 shadow-md rounded-md">
-          <img
-            class="w-[400px] h-[230px] object-cover"
-            src="../assets/images/decorate/blog2.jpg"
-            alt="blog1"
-          />
-          <h4 class="uppercase py-2 font-bold text-[#f25e23] text-center">
-            Vang Thăng Long classic
-          </h4>
-          <p class="py-4 text-gray-400 font-thin text-sm">Đăng bởi Giangle | 30/06/2023 | 60 bình luận</p>
-          <p class="max-w-[400px] text-center text-gray-500 font-thin">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-            distinctio explicabo velit, asperiores esse eligendi earum corrupti
-            voluptatibus maiores eveniet numquam adipisci tenetur animi
-            reprehenderit. Ab, et cumque. Error, molestiae!
-          </p>
-          <a
-            class="my-3 bg-[#1f2937] text-white py-2 text-center rounded-md w-[80%] font-thin"
-            href="./blog.html"
-            >Read more</a
+      <!-- Order list -->
+      <div class="flex items-center flex-col md:flex-row md:items-start gap-6">
+        <div class="w-full">
+          <!-- info -->
+          <div
+            class="flex p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50"
           >
+            <div>
+              <span class="font-medium">Danh sách đơn hàng:</span>
+              <ul class="mt-1.5 ml-4 list-disc list-inside">
+                <li>Trạng thái tất cả (16)</li>
+                <li>Đã hủy (10)</li>
+                <li>Chưa duyệt (0)</li>
+                <li>Đã duyệt (0)</li>
+                <li>Đã thanh toán (0)</li>
+                <li>Đã mua hàng (0)</li>
+              </ul>
+            </div>
+          </div>
+          <!-- table -->
+          <div class="overflow-x-auto shadow-md sm:rounded-lg">
+            <table class="w-full text-sm text-left text-gray-500">
+              <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                <tr>
+                  <th scope="col" class="px-6 py-3">ID</th>
+                  <th scope="col" class="px-6 py-3">Ngày Mua hàng</th>
+                  <th scope="col" class="px-6 py-3">Kho nhận hàng</th>
+                  <th scope="col" class="px-6 py-3">Số sản phẩm</th>
+                  <th scope="col" class="px-6 py-3">Tổng tiền</th>
+                  <th scope="col" class="px-6 py-3">Tình trạng</th>
+                  <th scope="col" class="px-6 py-3">Xem thêm</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="bg-white border-b">
+                  <td class="px-6 py-4">1</td>
+                  <td
+                    scope="row"
+                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap uppercase"
+                  >
+                    4/10/2023
+                  </td>
+                  <td class="px-6 py-4 text-[#feb207]">Đà Nẵng</td>
+                  <td class="px-6 py-4">12</td>
+                  <td class="px-6 py-4 text-[#feb207]">1.345.000đ</td>
+                  <td class="px-6 py-4 text-[#feb207]">Đã thanh toán</td>
+
+                  <td class="px-6 py-4 underline">Chi tiết</td>
+                </tr>
+                <tr class="bg-white border-b">
+                  <td class="px-6 py-4">1</td>
+                  <td
+                    scope="row"
+                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap uppercase"
+                  >
+                    4/10/2023
+                  </td>
+                  <td class="px-6 py-4 text-[#feb207]">Đà Nẵng</td>
+                  <td class="px-6 py-4">12</td>
+                  <td class="px-6 py-4 text-[#feb207]">1.345.000đ</td>
+                  <td class="px-6 py-4 text-[#feb207]">Đã thanh toán</td>
+
+                  <td class="px-6 py-4 underline">Chi tiết</td>
+                </tr>
+                <tr class="bg-white border-b">
+                  <td class="px-6 py-4">1</td>
+                  <td
+                    scope="row"
+                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap uppercase"
+                  >
+                    4/10/2023
+                  </td>
+                  <td class="px-6 py-4 text-[#feb207]">Đà Nẵng</td>
+                  <td class="px-6 py-4">12</td>
+                  <td class="px-6 py-4 text-[#feb207]">1.345.000đ</td>
+                  <td class="px-6 py-4 text-[#feb207]">Đã thanh toán</td>
+
+                  <td class="px-6 py-4 underline">Chi tiết</td>
+                </tr>
+                <tr class="bg-white border-b">
+                  <td class="px-6 py-4">1</td>
+                  <td
+                    scope="row"
+                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap uppercase"
+                  >
+                    4/10/2023
+                  </td>
+                  <td class="px-6 py-4 text-[#feb207]">Đà Nẵng</td>
+                  <td class="px-6 py-4">12</td>
+                  <td class="px-6 py-4 text-[#feb207]">1.345.000đ</td>
+                  <td class="px-6 py-4 text-[#feb207]">Đã thanh toán</td>
+
+                  <td class="px-6 py-4 underline">Chi tiết</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- Group button -->
+          <div class="py-6">
+            <div class="flex flex-row-reverse flex-wrap gap-2">
+              <a
+                href="./cart.html"
+                class="text-green-700 hover:text-white border border-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-800"
+                >Trở lại giỏ hàng</a
+              >
+              <a
+                href="./filter-product.html"
+                class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
+                >Tiếp tục mua hàng</a
+              >
+            </div>
+          </div>
         </div>
-        <div class="flex flex-col items-center p-3 shadow-md rounded-md">
-          <img
-            class="w-[400px] h-[230px] object-cover"
-            src="../assets/images/decorate/blog2.jpg"
-            alt="blog1"
-          />
-          <h4 class="uppercase py-2 font-bold text-[#f25e23] text-center">
-            Vang Thăng Long classic
-          </h4>
-          <p class="py-4 text-gray-400 font-thin text-sm">Đăng bởi Giangle | 30/06/2023 | 60 bình luận</p>
-          <p class="max-w-[400px] text-center text-gray-500 font-thin">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-            distinctio explicabo velit, asperiores esse eligendi earum corrupti
-            voluptatibus maiores eveniet numquam adipisci tenetur animi
-            reprehenderit. Ab, et cumque. Error, molestiae!
-          </p>
-          <a
-            class="my-3 bg-[#1f2937] text-white py-2 text-center rounded-md w-[80%] font-thin"
-            href="./blog.html"
-            >Read more</a
-          >
-        </div>
-        <div class="flex flex-col items-center p-3 shadow-md rounded-md">
-          <img
-            class="w-[400px] h-[230px] object-cover"
-            src="../assets/images/decorate/blog2.jpg"
-            alt="blog1"
-          />
-          <h4 class="uppercase py-2 font-bold text-[#f25e23] text-center">
-            Vang Thăng Long classic
-          </h4>
-          <p class="py-4 text-gray-400 font-thin text-sm">Đăng bởi Giangle | 30/06/2023 | 60 bình luận</p>
-          <p class="max-w-[400px] text-center text-gray-500 font-thin">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-            distinctio explicabo velit, asperiores esse eligendi earum corrupti
-            voluptatibus maiores eveniet numquam adipisci tenetur animi
-            reprehenderit. Ab, et cumque. Error, molestiae!
-          </p>
-          <a
-            class="my-3 bg-[#1f2937] text-white py-2 text-center rounded-md w-[80%] font-thin"
-            href="./blog.html"
-            >Read more</a
-          >
-        </div>
-        <div class="flex flex-col items-center p-3 shadow-md rounded-md">
-          <img
-            class="w-[400px] h-[230px] object-cover"
-            src="../assets/images/decorate/blog2.jpg"
-            alt="blog1"
-          />
-          <h4 class="uppercase py-2 font-bold text-[#f25e23] text-center">
-            Vang Thăng Long classic
-          </h4>
-          <p class="py-4 text-gray-400 font-thin text-sm">Đăng bởi Giangle | 30/06/2023 | 60 bình luận</p>
-          <p class="max-w-[400px] text-center text-gray-500 font-thin">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-            distinctio explicabo velit, asperiores esse eligendi earum corrupti
-            voluptatibus maiores eveniet numquam adipisci tenetur animi
-            reprehenderit. Ab, et cumque. Error, molestiae!
-          </p>
-          <a
-            class="my-3 bg-[#1f2937] text-white py-2 text-center rounded-md w-[80%] font-thin"
-            href="./blog.html"
-            >Read more</a
-          >
-        </div>
-        <div class="flex flex-col items-center p-3 shadow-md rounded-md">
-          <img
-            class="w-[400px] h-[230px] object-cover"
-            src="../assets/images/decorate/blog2.jpg"
-            alt="blog1"
-          />
-          <h4 class="uppercase py-2 font-bold text-[#f25e23] text-center">
-            Vang Thăng Long classic
-          </h4>
-          <p class="py-4 text-gray-400 font-thin text-sm">Đăng bởi Giangle | 30/06/2023 | 60 bình luận</p>
-          <p class="max-w-[400px] text-center text-gray-500 font-thin">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-            distinctio explicabo velit, asperiores esse eligendi earum corrupti
-            voluptatibus maiores eveniet numquam adipisci tenetur animi
-            reprehenderit. Ab, et cumque. Error, molestiae!
-          </p>
-          <a
-            class="my-3 bg-[#1f2937] text-white py-2 text-center rounded-md w-[80%] font-thin"
-            href="./blog.html"
-            >Read more</a
-          >
-        </div>
-        <div class="flex flex-col items-center p-3 shadow-md rounded-md">
-          <img
-            class="w-[400px] h-[230px] object-cover"
-            src="../assets/images/decorate/blog2.jpg"
-            alt="blog1"
-          />
-          <h4 class="uppercase py-2 font-bold text-[#f25e23] text-center">
-            Vang Thăng Long classic
-          </h4>
-          <p class="py-4 text-gray-400 font-thin text-sm">Đăng bởi Giangle | 30/06/2023 | 60 bình luận</p>
-          <p class="max-w-[400px] text-center text-gray-500 font-thin">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-            distinctio explicabo velit, asperiores esse eligendi earum corrupti
-            voluptatibus maiores eveniet numquam adipisci tenetur animi
-            reprehenderit. Ab, et cumque. Error, molestiae!
-          </p>
-          <a
-            class="my-3 bg-[#1f2937] text-white py-2 text-center rounded-md w-[80%] font-thin"
-            href="./blog.html"
-            >Read more</a
-          >
-        </div>
-        <div class="flex flex-col items-center p-3 shadow-md rounded-md">
-          <img
-            class="w-[400px] h-[230px] object-cover"
-            src="../assets/images/decorate/blog2.jpg"
-            alt="blog1"
-          />
-          <h4 class="uppercase py-2 font-bold text-[#f25e23] text-center">
-            Vang Thăng Long classic
-          </h4>
-          <p class="py-4 text-gray-400 font-thin text-sm">Đăng bởi Giangle | 30/06/2023 | 60 bình luận</p>
-          <p class="max-w-[400px] text-center text-gray-500 font-thin">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-            distinctio explicabo velit, asperiores esse eligendi earum corrupti
-            voluptatibus maiores eveniet numquam adipisci tenetur animi
-            reprehenderit. Ab, et cumque. Error, molestiae!
-          </p>
-          <a
-            class="my-3 bg-[#1f2937] text-white py-2 text-center rounded-md w-[80%] font-thin"
-            href="./blog.html"
-            >Read more</a
-          >
-        </div>
-        <div class="flex flex-col items-center p-3 shadow-md rounded-md">
-          <img
-            class="w-[400px] h-[230px] object-cover"
-            src="../assets/images/decorate/blog2.jpg"
-            alt="blog1"
-          />
-          <h4 class="uppercase py-2 font-bold text-[#f25e23] text-center">
-            Vang Thăng Long classic
-          </h4>
-          <p class="py-4 text-gray-400 font-thin text-sm">Đăng bởi Giangle | 30/06/2023 | 60 bình luận</p>
-          <p class="max-w-[400px] text-center text-gray-500 font-thin">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-            distinctio explicabo velit, asperiores esse eligendi earum corrupti
-            voluptatibus maiores eveniet numquam adipisci tenetur animi
-            reprehenderit. Ab, et cumque. Error, molestiae!
-          </p>
-          <a
-            class="my-3 bg-[#1f2937] text-white py-2 text-center rounded-md w-[80%] font-thin"
-            href="./blog.html"
-            >Read more</a
-          >
-        </div>
-        <div class="flex flex-col items-center p-3 shadow-md rounded-md">
-          <img
-            class="w-[400px] h-[230px] object-cover"
-            src="../assets/images/decorate/blog2.jpg"
-            alt="blog1"
-          />
-          <h4 class="uppercase py-2 font-bold text-[#f25e23] text-center">
-            Vang Thăng Long classic
-          </h4>
-          <p class="py-4 text-gray-400 font-thin text-sm">Đăng bởi Giangle | 30/06/2023 | 60 bình luận</p>
-          <p class="max-w-[400px] text-center text-gray-500 font-thin">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-            distinctio explicabo velit, asperiores esse eligendi earum corrupti
-            voluptatibus maiores eveniet numquam adipisci tenetur animi
-            reprehenderit. Ab, et cumque. Error, molestiae!
-          </p>
-          <a
-            class="my-3 bg-[#1f2937] text-white py-2 text-center rounded-md w-[80%] font-thin"
-            href="./blog.html"
-            >Read more</a
+        <!-- User info -->
+        <div class="text-blue-800 rounded-lg bg-blue-100 p-5">
+          <h4 class="uppercase pb-6">Thông tin khách hàng</h4>
+          <div class="py-2">
+            <i class="fa-solid fa-user"></i>
+            <span class="pl-2">nhthien.dut@gmail.com</span>
+          </div>
+          <div class="py-2">
+            <i class="fa-solid fa-location-dot text-[#f7085a]"></i>
+            <span class="pl-2">Tòa nhà FHome 14 Lý thường Kiệt</span>
+          </div>
+          <div class="py-2">
+            <i class="fa-solid fa-phone text-[#28a745]"></i>
+            <span class="pl-2">0337489251</span>
+          </div>
+          <a href="./address-customer.html" class="underline py-4"
+            >Địa chỉ chi tiết</a
           >
         </div>
       </div>
     </section>
+
     <!-- Footer -->
     <footer class="block bg-[#f7f7f7] mt-10">
       <div class="px-5 md:px-10">
