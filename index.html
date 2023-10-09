@@ -54,6 +54,9 @@
               <li class="px-5 hover:bg-[rgba(0,0,0,0.5)] py-3">
                 <a href="./views/register.html" class="py-3">Đăng kí</a>
               </li>
+              <li class="px-5 hover:bg-[rgba(0,0,0,0.5)] py-3">
+                <a href="./views/register.html" class="py-3">Đăng xuất</a>
+              </li>
             </ul>
           </nav>
           <nav class="hidden md:flex">
@@ -61,15 +64,19 @@
               <li class="px-5 hover:bg-[rgba(0,0,0,0.5)] py-3">
                 <a href="#" class="py-3">Tài khoản của tôi</a>
               </li>
-              <li class="px-5 hover:bg-[rgba(0,0,0,0.5)] py-3">
-                <a href="./views/cart.html" class="py-3">Giỏ hàng</a>
+              <li class="btn-goto-cart px-5 hover:bg-[rgba(0,0,0,0.5)] py-3">
+                Giỏ hàng
               </li>
-              <li class="px-5 hover:bg-[rgba(0,0,0,0.5)] py-3">
+              <li class="btn-login px-5 hover:bg-[rgba(0,0,0,0.5)] py-3">
                 <a href="./views/login.html" class="py-3">Đăng nhập</a>
               </li>
-              <li class="px-5 hover:bg-[rgba(0,0,0,0.5)] py-3">
+              <li class="btn-register px-5 hover:bg-[rgba(0,0,0,0.5)] py-3">
                 <a href="./views/register.html" class="py-3">Đăng kí</a>
               </li>
+              <li class="btn-logout px-5 hover:bg-[rgba(0,0,0,0.5)] py-3">
+                <a href="/" class="py-3">Đăng xuất</a>
+              </li>
+              <li class="name-user px-5 hover:bg-[rgba(0,0,0,0.5)] py-3"></li>
             </ul>
           </nav>
           <div class="relative">
@@ -261,9 +268,10 @@
         />
       </div>
       <div
+        id="new-product__block"
         class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 lg:gap-6 mt-12 px-4"
       >
-        <div class="text-center flex flex-col shadow-md py-4 rounded-md">
+        <!-- <div class="text-center flex flex-col shadow-md py-4 rounded-md">
           <img
             class="w-[200px] mx-auto"
             src="./assets/images/products/1.jpg"
@@ -280,61 +288,7 @@
           >
             Add to cart
           </button>
-        </div>
-        <div class="text-center flex flex-col shadow-md py-4 rounded-md">
-          <img
-            class="w-[200px] mx-auto"
-            src="./assets/images/products/1.jpg"
-            alt=""
-          />
-          <h4 class="py-3 uppercase">Rượu vang đà lạt</h4>
-          <div class="py-4">
-            <span class="text-[#f25e23] pr-2">370.000đ</span>
-            <span class="line-through text-gray-600">450.000đ</span>
-          </div>
-          <button
-            type="button"
-            class="block text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-thin rounded-lg text-sm px-5 py-2.5 mx-12 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
-          >
-            Add to cart
-          </button>
-        </div>
-        <div class="text-center flex flex-col shadow-md py-4 rounded-md">
-          <img
-            class="w-[200px] mx-auto"
-            src="./assets/images/products/1.jpg"
-            alt=""
-          />
-          <h4 class="py-3 uppercase">Rượu vang đà lạt</h4>
-          <div class="py-4">
-            <span class="text-[#f25e23] pr-2">370.000đ</span>
-            <span class="line-through text-gray-600">450.000đ</span>
-          </div>
-          <button
-            type="button"
-            class="block text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-thin rounded-lg text-sm px-5 py-2.5 mx-12 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
-          >
-            Add to cart
-          </button>
-        </div>
-        <div class="text-center flex flex-col shadow-md py-4 rounded-md">
-          <img
-            class="w-[200px] mx-auto"
-            src="./assets/images/products/1.jpg"
-            alt=""
-          />
-          <h4 class="py-3 uppercase">Rượu vang đà lạt</h4>
-          <div class="py-4">
-            <span class="text-[#f25e23] pr-2">370.000đ</span>
-            <span class="line-through text-gray-600">450.000đ</span>
-          </div>
-          <button
-            type="button"
-            class="block text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-thin rounded-lg text-sm px-5 py-2.5 mx-12 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
-          >
-            Add to cart
-          </button>
-        </div>
+        </div> -->
       </div>
     </section>
     <!-- Grid Image -->
@@ -395,9 +349,10 @@
         />
       </div>
       <div
+        id="selling-product__block"
         class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 lg:gap-6 mt-12 px-4"
       >
-        <div class="text-center flex flex-col shadow-md py-4 rounded-md">
+        <!-- <div class="text-center flex flex-col shadow-md py-4 rounded-md">
           <img
             class="w-[200px] mx-auto"
             src="./assets/images/products/1.jpg"
@@ -414,61 +369,7 @@
           >
             Add to cart
           </button>
-        </div>
-        <div class="text-center flex flex-col shadow-md py-4 rounded-md">
-          <img
-            class="w-[200px] mx-auto"
-            src="./assets/images/products/1.jpg"
-            alt=""
-          />
-          <h4 class="py-3 uppercase">Rượu vang đà lạt</h4>
-          <div class="py-4">
-            <span class="text-[#f25e23] pr-2">370.000đ</span>
-            <span class="line-through text-gray-600">450.000đ</span>
-          </div>
-          <button
-            type="button"
-            class="block text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-thin rounded-lg text-sm px-5 py-2.5 mx-12 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
-          >
-            Add to cart
-          </button>
-        </div>
-        <div class="text-center flex flex-col shadow-md py-4 rounded-md">
-          <img
-            class="w-[200px] mx-auto"
-            src="./assets/images/products/1.jpg"
-            alt=""
-          />
-          <h4 class="py-3 uppercase">Rượu vang đà lạt</h4>
-          <div class="py-4">
-            <span class="text-[#f25e23] pr-2">370.000đ</span>
-            <span class="line-through text-gray-600">450.000đ</span>
-          </div>
-          <button
-            type="button"
-            class="block text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-thin rounded-lg text-sm px-5 py-2.5 mx-12 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
-          >
-            Add to cart
-          </button>
-        </div>
-        <div class="text-center flex flex-col shadow-md py-4 rounded-md">
-          <img
-            class="w-[200px] mx-auto"
-            src="./assets/images/products/1.jpg"
-            alt=""
-          />
-          <h4 class="py-3 uppercase">Rượu vang đà lạt</h4>
-          <div class="py-4">
-            <span class="text-[#f25e23] pr-2">370.000đ</span>
-            <span class="line-through text-gray-600">450.000đ</span>
-          </div>
-          <button
-            type="button"
-            class="block text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-thin rounded-lg text-sm px-5 py-2.5 mx-12 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
-          >
-            Add to cart
-          </button>
-        </div>
+        </div> -->
       </div>
     </section>
     <!-- News and Blog -->
@@ -487,8 +388,11 @@
               alt="title-dark"
             />
           </div>
-          <div class="flex flex-col sm:flex-row items-center mt-5 p-4 gap-8">
-            <div class="flex flex-col">
+          <div
+            id="blogs-block"
+            class="flex flex-col sm:flex-row items-center mt-5 p-4 gap-8"
+          >
+            <!-- <div class="flex flex-col">
               <img
                 class="w-[420px] h-[230px] object-cover"
                 src="./assets/images/decorate/blog2.jpg"
@@ -497,7 +401,9 @@
               <h4 class="uppercase py-2 font-bold text-[#f25e23]">
                 Vang Thăng Long classic
               </h4>
-              <p class="py-4 text-gray-400 font-thin">Đăng bởi Giangle | 30/06/2023 | 60 bình luận</p>
+              <p class="py-4 text-gray-400 font-thin">
+                Đăng bởi Giangle | 30/06/2023 | 60 bình luận
+              </p>
               <p class="text-gray-500 font-thin">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Doloribus distinctio explicabo velit, asperiores esse eligendi
@@ -509,29 +415,7 @@
                 href="./views/blog.html"
                 >Read more</a
               >
-            </div>
-            <div class="flex flex-col">
-              <img
-                class="w-[420px] h-[230px] object-cover"
-                src="./assets/images/decorate/blog1.png"
-                alt="blog1"
-              />
-              <h4 class="uppercase py-2 font-bold text-[#f25e23]">
-                Vang Thăng Long classic
-              </h4>
-              <p class="py-4 text-gray-400 font-thin">Đăng bởi Giangle | 30/06/2023 | 60 bình luận</p>
-              <p class="text-gray-500 font-thin">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Doloribus distinctio explicabo velit, asperiores esse eligendi
-                earum corrupti voluptatibus maiores eveniet numquam adipisci
-                tenetur animi reprehenderit. Ab, et cumque. Error, molestiae!
-              </p>
-              <a
-                class="my-3 bg-[#1f2937] text-white py-2 text-center rounded-md w-[90%] font-thin"
-                href="./views/blog.html"
-                >Read more</a
-              >
-            </div>
+            </div> -->
           </div>
         </div>
         <div>
@@ -548,7 +432,8 @@
           <div class="flex items-center flex-col text-center">
             <p class="w-6 h-6 bg-[#f25e23] rounded-full">''</p>
             <p class="py-4 text-gray-400 font-thin">
-              Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn
+              Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự
+              nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn
             </p>
             <img
               class="w-[150px] rounded-md"
@@ -701,5 +586,7 @@
         </div>
       </div>
     </footer>
+
+    <script type="module" src="./js/home.js"></script>
   </body>
 </html>

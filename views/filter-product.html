@@ -59,14 +59,19 @@
               <li class="px-5 hover:bg-[rgba(0,0,0,0.2)] py-3">
                 <a href="#" class="py-3">Tài khoản của tôi</a>
               </li>
-              <li class="px-5 hover:bg-[rgba(0,0,0,0.2)] py-3">
-                <a href="./cart.html" class="py-3">Giỏ hàng</a>
+              <li class="btn-goto-cart px-5 hover:bg-[rgba(0,0,0,0.5)] py-3">
+                Giỏ hàng
               </li>
-              <li class="px-5 hover:bg-[rgba(0,0,0,0.2)] py-3">
+              <li class="btn-login px-5 hover:bg-[rgba(0,0,0,0.2)] py-3">
                 <a href="./login.html" class="py-3">Đăng nhập</a>
               </li>
-              <li class="px-5 hover:bg-[rgba(0,0,0,0.2)] py-3">
+              <li class="btn-register px-5 hover:bg-[rgba(0,0,0,0.2)] py-3">
                 <a href="./register.html" class="py-3">Đăng kí</a>
+              </li>
+              <li
+                class="btn-logout px-5 bg-red-50 hover:bg-[rgba(0,0,0,0.2)] py-3"
+              >
+                <a href="/" class="py-3">Đăng xuất</a>
               </li>
             </ul>
           </nav>
@@ -146,9 +151,7 @@
               >
             </li>
             <li class="px-8 hover:bg-[rgba(0,0,0,0.1)] py-3">
-              <a href="./introduce.html" class="py-3 uppercase"
-                >Thông tin</a
-              >
+              <a href="./introduce.html" class="py-3 uppercase">Thông tin</a>
             </li>
             <li class="px-8 hover:bg-[rgba(0,0,0,0.1)] py-3">
               <a href="./blog.html" class="py-3 uppercase">Blog</a>
@@ -188,68 +191,14 @@
               alt="titleleft"
             />
           </div>
-          <ul class="text-gray-500 pt-6">
-            <h5 class="uppercase text-xl py-2">Rượu ngoại</h5>
-            <li
+          <h5 class="uppercase text-xl py-2">Rượu ngoại</h5>
+          <ul id="category-block" class="text-gray-500 pt-6">
+            <!-- <li
               class="py-1 cursor-pointer hover:text-[#feb207] hover:list-disc duration-200 transition-all font-thin"
             >
               <span>Rượu Chivas</span>
               <span>(26)</span>
-            </li>
-            <li
-              class="py-1 cursor-pointer hover:text-[#feb207] hover:list-disc duration-200 transition-all font-thin"
-            >
-              <span>Rượu Chivas</span>
-              <span>(26)</span>
-            </li>
-            <li
-              class="py-1 cursor-pointer hover:text-[#feb207] hover:list-disc duration-200 transition-all font-thin"
-            >
-              <span>Rượu Chivas</span>
-              <span>(26)</span>
-            </li>
-            <li
-              class="py-1 cursor-pointer hover:text-[#feb207] hover:list-disc duration-200 transition-all font-thin"
-            >
-              <span>Rượu Chivas</span>
-              <span>(26)</span>
-            </li>
-            <li
-              class="py-1 cursor-pointer hover:text-[#feb207] hover:list-disc duration-200 transition-all font-thin"
-            >
-              <span>Rượu Chivas</span>
-              <span>(26)</span>
-            </li>
-            <li
-              class="py-1 cursor-pointer hover:text-[#feb207] hover:list-disc duration-200 transition-all font-thin"
-            >
-              <span>Rượu Chivas</span>
-              <span>(26)</span>
-            </li>
-            <li
-              class="py-1 cursor-pointer hover:text-[#feb207] hover:list-disc duration-200 transition-all font-thin"
-            >
-              <span>Rượu Chivas</span>
-              <span>(26)</span>
-            </li>
-            <li
-              class="py-1 cursor-pointer hover:text-[#feb207] hover:list-disc duration-200 transition-all font-thin"
-            >
-              <span>Rượu Chivas</span>
-              <span>(26)</span>
-            </li>
-            <li
-              class="py-1 cursor-pointer hover:text-[#feb207] hover:list-disc duration-200 transition-all font-thin"
-            >
-              <span>Rượu Chivas</span>
-              <span>(26)</span>
-            </li>
-            <li
-              class="py-1 cursor-pointer hover:text-[#feb207] hover:list-disc duration-200 transition-all font-thin"
-            >
-              <span>Rượu Chivas</span>
-              <span>(26)</span>
-            </li>
+            </li> -->
           </ul>
           <div class="py-4">
             <h3 class="uppercase text-xl pb-2">So Sánh sản phẩm</h3>
@@ -304,10 +253,10 @@
         <div class="flex-1">
           <div class="border flex justify-between p-3">
             <div class="flex items-center gap-4 text-gray-500">
-              <span class="cursor-pointer">
-                <i class="fa-solid fa-grip text-xl text-[#feb207]"></i>
+              <span id="display--grid" class="cursor-pointer">
+                <i class="fa-solid fa-grip text-xl"></i>
               </span>
-              <span class="cursor-pointer">
+              <span id="display--list" class="cursor-pointer">
                 <i class="fa-solid fa-list text-xl"></i>
               </span>
             </div>
@@ -386,9 +335,10 @@
             </div>
            -->
           <div
+            id="product-block"
             class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 lg:gap-6 mt-12"
           >
-            <div class="text-center flex flex-col shadow-md py-4 rounded-md">
+            <!-- <div class="text-center flex flex-col shadow-md py-4 rounded-md">
               <img
                 class="w-[200px] mx-auto"
                 src="../assets/images/products/1.jpg"
@@ -405,151 +355,7 @@
               >
                 Add to cart
               </button>
-            </div>
-            <div class="text-center flex flex-col shadow-md py-4 rounded-md">
-              <img
-                class="w-[200px] mx-auto"
-                src="../assets/images/products/1.jpg"
-                alt=""
-              />
-              <h4 class="py-3 uppercase">Rượu vang đà lạt</h4>
-              <div class="py-4">
-                <span class="text-[#f25e23] pr-2">370.000đ</span>
-                <span class="line-through text-gray-600">450.000đ</span>
-              </div>
-              <button
-                type="button"
-                class="block text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-thin rounded-lg text-sm px-5 py-2.5 mx-12 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
-              >
-                Add to cart
-              </button>
-            </div>
-            <div class="text-center flex flex-col shadow-md py-4 rounded-md">
-              <img
-                class="w-[200px] mx-auto"
-                src="../assets/images/products/1.jpg"
-                alt=""
-              />
-              <h4 class="py-3 uppercase">Rượu vang đà lạt</h4>
-              <div class="py-4">
-                <span class="text-[#f25e23] pr-2">370.000đ</span>
-                <span class="line-through text-gray-600">450.000đ</span>
-              </div>
-              <button
-                type="button"
-                class="block text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-thin rounded-lg text-sm px-5 py-2.5 mx-12 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
-              >
-                Add to cart
-              </button>
-            </div>
-            <div class="text-center flex flex-col shadow-md py-4 rounded-md">
-              <img
-                class="w-[200px] mx-auto"
-                src="../assets/images/products/1.jpg"
-                alt=""
-              />
-              <h4 class="py-3 uppercase">Rượu vang đà lạt</h4>
-              <div class="py-4">
-                <span class="text-[#f25e23] pr-2">370.000đ</span>
-                <span class="line-through text-gray-600">450.000đ</span>
-              </div>
-              <button
-                type="button"
-                class="block text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-thin rounded-lg text-sm px-5 py-2.5 mx-12 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
-              >
-                Add to cart
-              </button>
-            </div>
-            <div class="text-center flex flex-col shadow-md py-4 rounded-md">
-              <img
-                class="w-[200px] mx-auto"
-                src="../assets/images/products/1.jpg"
-                alt=""
-              />
-              <h4 class="py-3 uppercase">Rượu vang đà lạt</h4>
-              <div class="py-4">
-                <span class="text-[#f25e23] pr-2">370.000đ</span>
-                <span class="line-through text-gray-600">450.000đ</span>
-              </div>
-              <button
-                type="button"
-                class="block text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-thin rounded-lg text-sm px-5 py-2.5 mx-12 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
-              >
-                Add to cart
-              </button>
-            </div>
-            <div class="text-center flex flex-col shadow-md py-4 rounded-md">
-              <img
-                class="w-[200px] mx-auto"
-                src="../assets/images/products/1.jpg"
-                alt=""
-              />
-              <h4 class="py-3 uppercase">Rượu vang đà lạt</h4>
-              <div class="py-4">
-                <span class="text-[#f25e23] pr-2">370.000đ</span>
-                <span class="line-through text-gray-600">450.000đ</span>
-              </div>
-              <button
-                type="button"
-                class="block text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-thin rounded-lg text-sm px-5 py-2.5 mx-12 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
-              >
-                Add to cart
-              </button>
-            </div>
-            <div class="text-center flex flex-col shadow-md py-4 rounded-md">
-              <img
-                class="w-[200px] mx-auto"
-                src="../assets/images/products/1.jpg"
-                alt=""
-              />
-              <h4 class="py-3 uppercase">Rượu vang đà lạt</h4>
-              <div class="py-4">
-                <span class="text-[#f25e23] pr-2">370.000đ</span>
-                <span class="line-through text-gray-600">450.000đ</span>
-              </div>
-              <button
-                type="button"
-                class="block text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-thin rounded-lg text-sm px-5 py-2.5 mx-12 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
-              >
-                Add to cart
-              </button>
-            </div>
-            <div class="text-center flex flex-col shadow-md py-4 rounded-md">
-              <img
-                class="w-[200px] mx-auto"
-                src="../assets/images/products/1.jpg"
-                alt=""
-              />
-              <h4 class="py-3 uppercase">Rượu vang đà lạt</h4>
-              <div class="py-4">
-                <span class="text-[#f25e23] pr-2">370.000đ</span>
-                <span class="line-through text-gray-600">450.000đ</span>
-              </div>
-              <button
-                type="button"
-                class="block text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-thin rounded-lg text-sm px-5 py-2.5 mx-12 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
-              >
-                Add to cart
-              </button>
-            </div>
-            <div class="text-center flex flex-col shadow-md py-4 rounded-md">
-              <img
-                class="w-[200px] mx-auto"
-                src="../assets/images/products/1.jpg"
-                alt=""
-              />
-              <h4 class="py-3 uppercase">Rượu vang đà lạt</h4>
-              <div class="py-4">
-                <span class="text-[#f25e23] pr-2">370.000đ</span>
-                <span class="line-through text-gray-600">450.000đ</span>
-              </div>
-              <button
-                type="button"
-                class="block text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-thin rounded-lg text-sm px-5 py-2.5 mx-12 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
-              >
-                Add to cart
-              </button>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -696,5 +502,7 @@
         </div>
       </div>
     </footer>
+
+    <script type="module" src="../js/filter-product.js" defer></script>
   </body>
 </html>
