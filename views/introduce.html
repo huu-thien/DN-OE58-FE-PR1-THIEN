@@ -59,14 +59,19 @@
               <li class="px-5 hover:bg-[rgba(0,0,0,0.2)] py-3">
                 <a href="#" class="py-3">Tài khoản của tôi</a>
               </li>
-              <li class="px-5 hover:bg-[rgba(0,0,0,0.2)] py-3">
-                <a href="./cart.html" class="py-3">Giỏ hàng</a>
+              <li class="btn-goto-cart px-5 hover:bg-[rgba(0,0,0,0.5)] py-3">
+                Giỏ hàng
               </li>
-              <li class="px-5 hover:bg-[rgba(0,0,0,0.2)] py-3">
+              <li class="btn-login px-5 hover:bg-[rgba(0,0,0,0.2)] py-3">
                 <a href="./login.html" class="py-3">Đăng nhập</a>
               </li>
-              <li class="px-5 hover:bg-[rgba(0,0,0,0.2)] py-3">
+              <li class="btn-register px-5 hover:bg-[rgba(0,0,0,0.2)] py-3">
                 <a href="./register.html" class="py-3">Đăng kí</a>
+              </li>
+              <li
+                class="btn-logout px-5 bg-red-50 hover:bg-[rgba(0,0,0,0.2)] py-3"
+              >
+                <a href="/" class="py-3">Đăng xuất</a>
               </li>
             </ul>
           </nav>
@@ -145,9 +150,7 @@
               >
             </li>
             <li class="px-8 hover:bg-[rgba(0,0,0,0.1)] py-3">
-              <a href="./introduce.html" class="py-3 uppercase"
-                >Thông tin</a
-              >
+              <a href="./introduce.html" class="py-3 uppercase">Thông tin</a>
             </li>
             <li class="px-8 hover:bg-[rgba(0,0,0,0.1)] py-3">
               <a href="./blog.html" class="py-3 uppercase">Blog</a>
@@ -168,9 +171,15 @@
       <h4 class="uppercase text-lg pt-4 pb-2">Giới thiệu</h4>
       <img src="../assets/images/decorate/titleleft-dark.png" alt="" />
       <div class="py-8 flex flex-col md:flex-row gap-8 justify-between">
-        <img class="max-w-[100%] md:max-w-[50%] " src="../assets/images/decorate/wine.jpg" alt="wine" />
+        <img
+          class="max-w-[100%] md:max-w-[50%]"
+          src="../assets/images/decorate/wine.jpg"
+          alt="wine"
+        />
         <div>
-          <h5 class="uppercase text-xl font-bold text-cyan-700">Chào mừng đến với wine house</h5>
+          <h5 class="uppercase text-xl font-bold text-cyan-700">
+            Chào mừng đến với wine house
+          </h5>
           <p class="text-gray-400 py-4 font-thin">
             Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự
             nhiên từ hoa quả có độ rượu nhẹ, bọt ga đầy trắng mịn. Vang nổ Thăng
@@ -178,11 +187,13 @@
             chai dung tích 750ml. Vang nổ Thăng Long có hương vị đặc trưng của
             sản phẩm lên men tự nhiên từ hoa quả có độ rượu nhẹ, bọt ga đầy
             trắng mịn. Vang nổ Thăng Long tạo cảm giác hưng phấn, êm dịu, vui
-            tươi, sản phẩm được đóng chai dung tích 750ml. 
-            <p class="text-gray-400 font-thin">Vang nổ Thăng Long có
-              hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả có độ
-              rượu nhẹ, bọt ga đầy trắng mịn. Vang nổ Thăng Long tạo cảm giác hưng
-              phấn, êm dịu, vui tươi, sản phẩm được đóng chai dung tích 750ml.</p>
+            tươi, sản phẩm được đóng chai dung tích 750ml.
+          </p>
+          <p class="text-gray-400 font-thin">
+            Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự
+            nhiên từ hoa quả có độ rượu nhẹ, bọt ga đầy trắng mịn. Vang nổ Thăng
+            Long tạo cảm giác hưng phấn, êm dịu, vui tươi, sản phẩm được đóng
+            chai dung tích 750ml.
           </p>
         </div>
       </div>
@@ -328,5 +339,7 @@
         </div>
       </div>
     </footer>
+
+    <script type="module" src="../js/introduce.js"></script>
   </body>
 </html>

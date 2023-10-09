@@ -62,11 +62,14 @@
               <li class="px-5 hover:bg-[rgba(0,0,0,0.2)] py-3">
                 <a href="./cart.html" class="py-3">Giỏ hàng</a>
               </li>
-              <li class="px-5 hover:bg-[rgba(0,0,0,0.2)] py-3">
+              <li class="btn-login px-5 hover:bg-[rgba(0,0,0,0.2)] py-3">
                 <a href="./login.html" class="py-3">Đăng nhập</a>
               </li>
-              <li class="px-5 hover:bg-[rgba(0,0,0,0.2)] py-3">
+              <li class="btn-register px-5 hover:bg-[rgba(0,0,0,0.2)] py-3">
                 <a href="./register.html" class="py-3">Đăng kí</a>
+              </li>
+              <li class="btn-logout px-5 bg-red-50 hover:bg-[rgba(0,0,0,0.2)] py-3">
+                <a href="/" class="py-3">Đăng xuất</a>
               </li>
             </ul>
           </nav>
@@ -186,8 +189,8 @@
             <div>
               <span class="font-medium">Danh sách đơn hàng:</span>
               <ul class="mt-1.5 ml-4 list-disc list-inside">
-                <li>Trạng thái tất cả (16)</li>
-                <li>Đã hủy (10)</li>
+                <li class="all-orders"></li>
+                <li>Đã hủy (0)</li>
                 <li>Chưa duyệt (0)</li>
                 <li>Đã duyệt (0)</li>
                 <li>Đã thanh toán (0)</li>
@@ -203,14 +206,14 @@
                   <th scope="col" class="px-6 py-3">ID</th>
                   <th scope="col" class="px-6 py-3">Ngày Mua hàng</th>
                   <th scope="col" class="px-6 py-3">Kho nhận hàng</th>
-                  <th scope="col" class="px-6 py-3">Số sản phẩm</th>
                   <th scope="col" class="px-6 py-3">Tổng tiền</th>
-                  <th scope="col" class="px-6 py-3">Tình trạng</th>
+                  <th scope="col" class="px-6 py-3">Tên chủ thẻ</th>
+                  <th scope="col" class="px-6 py-3">Số thẻ</th>
                   <th scope="col" class="px-6 py-3">Xem thêm</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr class="bg-white border-b">
+              <tbody id="orders-block">
+                <!-- <tr class="bg-white border-b">
                   <td class="px-6 py-4">1</td>
                   <td
                     scope="row"
@@ -224,52 +227,8 @@
                   <td class="px-6 py-4 text-[#feb207]">Đã thanh toán</td>
 
                   <td class="px-6 py-4 underline">Chi tiết</td>
-                </tr>
-                <tr class="bg-white border-b">
-                  <td class="px-6 py-4">1</td>
-                  <td
-                    scope="row"
-                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap uppercase"
-                  >
-                    4/10/2023
-                  </td>
-                  <td class="px-6 py-4 text-[#feb207]">Đà Nẵng</td>
-                  <td class="px-6 py-4">12</td>
-                  <td class="px-6 py-4 text-[#feb207]">1.345.000đ</td>
-                  <td class="px-6 py-4 text-[#feb207]">Đã thanh toán</td>
-
-                  <td class="px-6 py-4 underline">Chi tiết</td>
-                </tr>
-                <tr class="bg-white border-b">
-                  <td class="px-6 py-4">1</td>
-                  <td
-                    scope="row"
-                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap uppercase"
-                  >
-                    4/10/2023
-                  </td>
-                  <td class="px-6 py-4 text-[#feb207]">Đà Nẵng</td>
-                  <td class="px-6 py-4">12</td>
-                  <td class="px-6 py-4 text-[#feb207]">1.345.000đ</td>
-                  <td class="px-6 py-4 text-[#feb207]">Đã thanh toán</td>
-
-                  <td class="px-6 py-4 underline">Chi tiết</td>
-                </tr>
-                <tr class="bg-white border-b">
-                  <td class="px-6 py-4">1</td>
-                  <td
-                    scope="row"
-                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap uppercase"
-                  >
-                    4/10/2023
-                  </td>
-                  <td class="px-6 py-4 text-[#feb207]">Đà Nẵng</td>
-                  <td class="px-6 py-4">12</td>
-                  <td class="px-6 py-4 text-[#feb207]">1.345.000đ</td>
-                  <td class="px-6 py-4 text-[#feb207]">Đã thanh toán</td>
-
-                  <td class="px-6 py-4 underline">Chi tiết</td>
-                </tr>
+                </tr> -->
+                
               </tbody>
             </table>
           </div>
@@ -309,6 +268,38 @@
           >
         </div>
       </div>
+      <!-- Stpper -->
+      <div class="">
+        <ol class="flex items-center w-full">
+          <li
+            class="flex w-full items-center text-white after:content-[''] after:w-full after:h-1 after:border-b after:border-blue-100 after:border-4 after:inline-block dark:after:border-blue-600 "
+          >
+            <span
+              class="flex items-center justify-center w-10 h-10 bg-blue-600 rounded-full lg:h-12 lg:w-12 shrink-0"
+            >
+              <i class="fa-solid fa-cart-shopping text-xl"></i>
+            </span>
+          </li>
+          <li
+          class="flex w-full items-center text-white after:content-[''] after:w-full after:h-1 after:border-b after:border-blue-100 after:border-4 after:inline-block dark:after:border-blue-600 "
+          >
+            <span
+              class="flex items-center justify-center w-10 h-10 bg-blue-600 rounded-full lg:h-12 lg:w-12 shrink-0"
+            >
+            <i class="fa-solid fa-money-bill text-xl"></i>
+  
+            </span>
+          </li>
+          <li class="flex items-center w-full">
+            <span
+            class="flex items-center text-white  justify-center w-10 h-10 bg-blue-600 rounded-full lg:h-12 lg:w-12 shrink-0"
+            >
+              <i class="fa-solid fa-clipboard-check text-xl"></i>
+            </span>
+          </li>
+        </ol>
+      </div>
+    </div>
     </section>
 
     <!-- Footer -->
@@ -452,5 +443,7 @@
         </div>
       </div>
     </footer>
+
+    <script type="module" src="../js/orders.js"></script>
   </body>
 </html>
