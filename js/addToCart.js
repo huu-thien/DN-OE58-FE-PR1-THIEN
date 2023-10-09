@@ -13,9 +13,9 @@ const saveCart = async (dataUser) => {
   );
 };
 
-const handleAddToCart = (id, name, image, price) => {
+const handleAddToCart = (id, name, image, price, quantity) => {
   const dataUser = JSON.parse(localStorage.getItem("user"));
-  const productAdd = { id, name, image, price, quantity: 1 };
+  const productAdd = { id, name, image, price, quantity };
   if (dataUser.cart.length === 0) {
     dataUser.cart.push(productAdd);
     console.log("them moi vi rong");
@@ -26,7 +26,7 @@ const handleAddToCart = (id, name, image, price) => {
       return Number(product.id) === Number(productAdd.id);
     });
     if (duplicate) {
-      dataUser.cart[indexDuplicate].quantity += 1;
+      dataUser.cart[indexDuplicate].quantity += quantity;
     } else {
       dataUser.cart.push(productAdd);
     }

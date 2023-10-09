@@ -8,25 +8,25 @@
       "email": "nhthien.dut@gmail.com",
       "cart": [
         {
-          "id": "29",
-          "name": "Rượu Champagne A",
-          "image": "../assets/images/products/4.jpg",
+          "id": "1",
+          "name": "Rượu Vang Pháp A",
+          "image": "../assets/images/products/6.jpg",
           "price": "380000",
           "quantity": 3
         },
         {
-          "id": "5",
-          "name": "Rượu Vang Pháp E",
-          "image": "../assets/images/products/4.jpg",
-          "price": "420000",
-          "quantity": 1
+          "id": "2",
+          "name": "Rượu Vang Pháp B",
+          "image": "../assets/images/products/1.jpg",
+          "price": "390000",
+          "quantity": 3
         },
         {
-          "id": "6",
-          "name": "Rượu Vang Pháp F",
-          "image": "../assets/images/products/5.jpg",
-          "price": "430000",
-          "quantity": 1
+          "id": "3",
+          "name": "Rượu Vang Pháp C",
+          "image": "../assets/images/products/2.jpg",
+          "price": "400000",
+          "quantity": 8
         }
       ]
     },
@@ -779,6 +779,17 @@
       "wareHouse": "Da Nang",
       "totalMoney": 1930000,
       "id": 10
+    },
+    {
+      "userId": 1,
+      "email": "thiencute180402@gmail.com",
+      "cardHolders": "Thien hihi",
+      "cardDescriptors": "123-123-123",
+      "address": "Số 7 Nguyễn Thị Minh Khai, Phường Bến Nghé, Quận 1, TP Hồ Chí Minh",
+      "createdAt": "9/10/2023 10:57:7",
+      "wareHouse": "Da Nang",
+      "totalMoney": 1940000,
+      "id": 11
     }
   ]
 }

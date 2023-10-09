@@ -75,13 +75,14 @@ const renderDetailProduct = (procductDetail) => {
       <div class="py-4">
         <p class="uppercase text-xl pb-2">Số Lượng</p>
         <span>
-          <button class="bg-gray-200 px-3">-</button>
+          <button id="btn-decrease-quantity" class="bg-gray-200 px-3">-</button>
           <input
+            id="input-quantity"
             class="max-w-[60px] text-center border"
             type="text"
             value="1"
           />
-          <button class="bg-gray-200 px-3">+</button>
+          <button id="btn-increase-quantity" class="bg-gray-200 px-3">+</button>
         </span>
         <button
         data-product-id="${product.id}"
@@ -131,6 +132,7 @@ const renderDetailProduct = (procductDetail) => {
 
   // Add event listener cho sự kiện add to cart
   const buttonAddToCart = $$(".btn-add-to-cart");
+  const inputQuantity = $("#input-quantity");
   buttonAddToCart.forEach((button) => {
     button.addEventListener("click", () => {
       if (localStorage.getItem("user")) {
@@ -138,11 +140,24 @@ const renderDetailProduct = (procductDetail) => {
         const id = button.getAttribute("data-product-id");
         const price = button.getAttribute("data-product-price");
         const image = button.getAttribute("data-product-image");
-        handleAddToCart(id, name, image, price);
+        const quantity = Number(inputQuantity.value);
+        handleAddToCart(id, name, image, price, quantity);
       } else {
         alert("Bạn cần đăng nhập để quản lý giỏ hàng của mình !!");
       }
     });
+  });
+  // Add event listener cho cho sự kiện tăng giảm số lượng
+  const btnIncrease = $("#btn-increase-quantity");
+  const btnDecrease = $("#btn-decrease-quantity");
+  btnIncrease.addEventListener("click", () => {
+    inputQuantity.value = Number(inputQuantity.value) + 1;
+  });
+  btnDecrease.addEventListener("click", () => {
+    if (Number(inputQuantity.value) === 1) {
+      return;
+    }
+    inputQuantity.value = Number(inputQuantity.value) - 1;
   });
 };
 
