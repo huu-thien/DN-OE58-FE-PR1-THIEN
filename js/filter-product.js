@@ -10,12 +10,16 @@ const $$ = document.querySelectorAll.bind(document);
 
 const API_CATEGORIES_URL = "http://localhost:3000/categories";
 const API_PRODUCTS_URL = "http://localhost:3000/products";
+const API_PRODUCTS_URL_PAGE_1 = `${API_PRODUCTS_URL}?_page=1&_limit=6`;
+
 
 const categoryBlock = $("#category-block");
 const productBlock = $("#product-block");
 
 const btnDisplayGrid = $("#display--grid");
 const btnDisplayList = $("#display--list");
+
+const paginationGroup = $("#pagnation--group");
 
 const countProductByCategory = (products) => {
   const productCounts = {};
@@ -117,7 +121,7 @@ const renderProductsGrid = (products) => {
         const id = button.getAttribute("data-product-id");
         const price = button.getAttribute("data-product-price");
         const image = button.getAttribute("data-product-image");
-        handleAddToCart(id, name, image, price);
+        handleAddToCart(id, name, image, price, 1);
       } else {
         alert("Bạn cần đăng nhập để quản lý giỏ hàng của mình !!");
       }
@@ -210,7 +214,7 @@ const getAllCategories = async () => {
 };
 
 const getAllProducts = async () => {
-  const products = await fetch(API_PRODUCTS_URL).then((res) => res.json());
+  const products = await fetch(API_PRODUCTS_URL_PAGE_1).then((res) => res.json());
   renderProductsGrid(products);
 };
 const handleFilterProduct = async (categoryId) => {
@@ -225,7 +229,7 @@ const handleFilterProduct = async (categoryId) => {
   }
 };
 const handleChangeDisplayProduct = async () => {
-  const products = await fetch(API_PRODUCTS_URL).then((res) => res.json());
+  const products = await fetch(API_PRODUCTS_URL_PAGE_1).then((res) => res.json());
   btnDisplayGrid.addEventListener("click", () => {
     btnDisplayGrid.classList.add("text-[#feb207]")
     btnDisplayList.classList.remove('text-[#feb207]')
@@ -243,6 +247,34 @@ const handleChangeDisplayProduct = async () => {
   });
 };
 
+const renderPaginationGroups = (productLength) => {
+  const totalPages = Math.ceil(productLength / 6);
+  for(let i = 0; i < totalPages; i++) {
+    const pageLink = document.createElement('span');
+    if(i === 0) pageLink.classList.add('text-[#feb207]')
+    pageLink.textContent = i + 1 ;
+    pageLink.classList.add('pagination-item')
+    pageLink.addEventListener("click", async () => {
+      const products = await fetch(`${API_PRODUCTS_URL}?_page=${i+1}&_limit=6`).then(res => res.json());
+      $$('.pagination-item').forEach(item => {
+        item.classList.remove('text-[#feb207]')
+      })
+      pageLink.classList.add("text-[#feb207]")
+      if(productBlock.getAttribute("class") === 'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 lg:gap-6 mt-12') {
+        renderProductsGrid(products);
+      } else {
+        renderProductsList(products);
+    
+      }
+    })
+    paginationGroup.appendChild(pageLink);
+  }
+}
+const getPagination = async () => {
+  const listProduct = await fetch(API_PRODUCTS_URL).then(res => res.json());
+  renderPaginationGroups(listProduct.length);
+}
+
 const start = () => {
   handleCheckLogin();
   handleLogout();
@@ -250,5 +282,6 @@ const start = () => {
   getAllCategories();
   getAllProducts();
   handleChangeDisplayProduct();
+  getPagination();
 };
 start();
