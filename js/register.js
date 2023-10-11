@@ -11,6 +11,18 @@ const password = $("#password");
 const confirmPassword = $("#confirmPassword");
 const btnRegister = $("#btn-register");
 
+//
+
+// Check validate email exist
+const isEmailExist = async (username, email) => {
+  const listAccount = await fetch(API_URL).then((res) => res.json());
+  const emailExist = listAccount.find((account) => {
+    
+    return account.email === email || account.username === username
+  });
+  return emailExist;
+};
+
 // Handle post api register
 const createUserAccount = async (fullName, username, email, password) => {
   const newAccount = {
@@ -28,26 +40,38 @@ const createUserAccount = async (fullName, username, email, password) => {
     body: JSON.stringify(newAccount),
   };
   const result = await fetch(API_URL, options).then((res) => res.json());
-  console.log(result);
 };
 
 const handleRegister = () => {
-  btnRegister.onclick = (e) => {
+  btnRegister.onclick = async (e) => {
     e.preventDefault();
     if (password.value !== confirmPassword.value) {
       alert("Mật khẩu xác nhận không trùng khớp");
+    } else if (!isValidEmail(email.value)) {
+      alert("Email không hợp lệ");
     } else {
-      createUserAccount(
-        fullName.value,
-        username.value,
-        email.value,
-        password.value
-      );
-      alert("Đăng kí tài khoản thành công");
-      window.location.href = "./login.html";
+      const emailExist = await isEmailExist(username.value, email.value);
+      if (emailExist) {
+        alert("Tài khoản hoặc email đã tồn tại");
+      } else {
+        createUserAccount(
+          fullName.value,
+          username.value,
+          email.value,
+          password.value
+        );
+        alert("Đăng ký tài khoản thành công");
+        window.location.href = "./login.html";
+      }
     }
   };
 };
+
+// Kiểm tra tính hợp lệ của email sử dụng biểu thức chính quy
+function isValidEmail(email) {
+  const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+  return emailRegex.test(email);
+}
 
 const start = () => {
   handleGotoCart();

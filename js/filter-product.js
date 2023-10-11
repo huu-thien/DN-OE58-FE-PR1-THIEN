@@ -191,7 +191,7 @@ const renderProductsList = (products) => {
         const id = button.getAttribute("data-product-id");
         const price = button.getAttribute("data-product-price");
         const image = button.getAttribute("data-product-image");
-        handleAddToCart(id, name, image, price);
+        handleAddToCart(id, name, image, price, 1);
       } else {
         alert("Bạn cần đăng nhập để quản lý giỏ hàng của mình !!");
       }
@@ -264,7 +264,6 @@ const renderPaginationGroups = (productLength) => {
         renderProductsGrid(products);
       } else {
         renderProductsList(products);
-    
       }
     })
     paginationGroup.appendChild(pageLink);

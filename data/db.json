@@ -15,52 +15,20 @@
           "quantity": 3
         },
         {
-          "id": "2",
-          "name": "Rượu Vang Pháp B",
-          "image": "../assets/images/products/1.jpg",
-          "price": "390000",
-          "quantity": 3
+          "id": "20",
+          "name": "Rượu Vodka F",
+          "image": "../assets/images/products/9.jpg",
+          "price": "430000",
+          "quantity": 1
         },
         {
-          "id": "3",
-          "name": "Rượu Vang Pháp C",
-          "image": "../assets/images/products/2.jpg",
-          "price": "400000",
-          "quantity": 8
+          "id": "21",
+          "name": "Rượu Vodka G",
+          "image": "../assets/images/products/10.jpg",
+          "price": "440000",
+          "quantity": 1
         }
       ]
-    },
-    {
-      "id": 2,
-      "username": "admin",
-      "password": "admin123",
-      "fullName": "Admin User",
-      "email": "admin@example.com",
-      "cart": [
-        {
-          "id": "37",
-          "name": "Rượu Scotch A",
-          "image": "../assets/images/products/6.jpg",
-          "price": "380000",
-          "quantity": 2
-        }
-      ]
-    },
-    {
-      "fullName": "Nguyen Huu Dung",
-      "username": "dung123",
-      "email": "dung123@gmail.com",
-      "password": "123456",
-      "cart": [],
-      "id": 3
-    },
-    {
-      "fullName": "Nguyen Van B",
-      "username": "bbb",
-      "email": "bbb@gmail.com",
-      "password": "123456",
-      "cart": [],
-      "id": 4
     }
   ],
   "categories": [
@@ -705,91 +673,14 @@
   "orders": [
     {
       "userId": 1,
-      "email": "thiencute180402@gmail.com",
+      "email": "nhthien.dut@gmail.com",
       "cardHolders": "Nguyen huu thien",
       "cardDescriptors": "1234-1234-1234",
       "address": "Số 7 Nguyễn Thị Minh Khai, Phường Bến Nghé, Quận 1, TP Hồ Chí Minh",
-      "createdAt": "6/10/2023 22:43:36",
+      "createdAt": "11/10/2023 12:13:1",
       "wareHouse": "Da Nang",
-      "totalMoney": 2360000,
+      "totalMoney": 2330000,
       "id": 1
-    },
-    {
-      "userId": 1,
-      "email": "thiencute180402@gmail.com",
-      "cardHolders": "Nguyen huu thien",
-      "cardDescriptors": "1234-1234-1234",
-      "address": "Số 7 Nguyễn Thị Minh Khai, Phường Bến Nghé, Quận 1, TP Hồ Chí Minh",
-      "createdAt": "7/10/2023 0:34:39",
-      "wareHouse": "Da Nang",
-      "totalMoney": 1550000,
-      "id": 5
-    },
-    {
-      "userId": 1,
-      "email": "nhthien.dut@gmail.com",
-      "cardHolders": "Thien Dap Trai",
-      "cardDescriptors": "1212-3434-5656",
-      "address": "Số 7 Nguyễn Thị Minh Khai, Phường Bến Nghé, Quận 1, TP Hồ Chí Minh",
-      "createdAt": "7/10/2023 0:56:12",
-      "wareHouse": "Da Nang",
-      "totalMoney": 1720000,
-      "id": 6
-    },
-    {
-      "userId": 1,
-      "email": "hmmx3.1416@gmail.com",
-      "cardHolders": "Thien hihi",
-      "cardDescriptors": "1212-3434-5656",
-      "address": "Số 7 Nguyễn Thị Minh Khai, Phường Bến Nghé, Quận 1, TP Hồ Chí Minh",
-      "createdAt": "7/10/2023 12:52:8",
-      "wareHouse": "Da Nang",
-      "totalMoney": 3240000,
-      "id": 7
-    },
-    {
-      "userId": 1,
-      "email": "nhthien.dut@gmail.com",
-      "cardHolders": "Thien Nguyen",
-      "cardDescriptors": "1111-1111-1111-1111",
-      "address": "16 Ly Thi A",
-      "createdAt": "7/10/2023 18:43:44",
-      "wareHouse": "Da Nang",
-      "totalMoney": 1920000,
-      "id": 8
-    },
-    {
-      "userId": 3,
-      "email": "dung123@gmail.com",
-      "cardHolders": "Dung Dep Trai",
-      "cardDescriptors": "1234-1234-1234",
-      "address": "Số 7 Nguyễn Thị Minh Khai, Phường Bến Nghé, Quận 1, TP Hồ Chí Minh",
-      "createdAt": "7/10/2023 18:46:45",
-      "wareHouse": "Da Nang",
-      "totalMoney": 2750000,
-      "id": 9
-    },
-    {
-      "userId": 4,
-      "email": "thiencute180402@gmail.com",
-      "cardHolders": "Nguyen Van B",
-      "cardDescriptors": "123-123-123",
-      "address": "Số 7 Nguyễn Thị Minh Khai, Phường Bến Nghé, Quận 1, TP Hồ Chí Minh",
-      "createdAt": "8/10/2023 3:28:48",
-      "wareHouse": "Da Nang",
-      "totalMoney": 1930000,
-      "id": 10
-    },
-    {
-      "userId": 1,
-      "email": "thiencute180402@gmail.com",
-      "cardHolders": "Thien hihi",
-      "cardDescriptors": "123-123-123",
-      "address": "Số 7 Nguyễn Thị Minh Khai, Phường Bến Nghé, Quận 1, TP Hồ Chí Minh",
-      "createdAt": "9/10/2023 10:57:7",
-      "wareHouse": "Da Nang",
-      "totalMoney": 1940000,
-      "id": 11
     }
   ]
 }

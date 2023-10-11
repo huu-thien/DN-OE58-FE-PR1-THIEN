@@ -18,7 +18,6 @@ const handleAddToCart = (id, name, image, price, quantity) => {
   const productAdd = { id, name, image, price, quantity };
   if (dataUser.cart.length === 0) {
     dataUser.cart.push(productAdd);
-    console.log("them moi vi rong");
   } else {
     let indexDuplicate;
     const duplicate = dataUser.cart.find((product, index) => {
